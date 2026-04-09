@@ -1231,6 +1231,12 @@
 
 <body>
 
+    <!-- Demo Banner -->
+    <div onclick="document.querySelector('[data-router=booking]') ? document.querySelector('[data-router=booking]').click() : window.scrollTo(0, document.body.scrollHeight)" style="position:fixed;top:0;left:0;width:100%;z-index:99999;background:linear-gradient(90deg,#e8a012,#f0b83a);color:#1a1a1a;text-align:center;padding:10px 15px;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.15);font-family:sans-serif;">
+      This is a demo site — for changes and making sites <span style="text-decoration:underline;color:#1a1a1a;font-weight:700;margin-left:4px;">Book Appointment</span>
+    </div>
+    <div style="height:40px;"></div>
+
     <!-- Service Details Modal -->
     <div class="service-modal" id="serviceModal" onclick="closeServiceModal(event)">
         <div class="service-modal-content" onclick="event.stopPropagation()">
