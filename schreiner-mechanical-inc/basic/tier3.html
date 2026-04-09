@@ -1111,6 +1111,12 @@
 
 <body>
 
+    <!-- Demo Banner -->
+    <div onclick="navigateTo('booking')" style="position:fixed;top:0;left:0;width:100%;z-index:99999;background:linear-gradient(90deg,#e8a012,#f0b83a);color:#1a1a1a;text-align:center;padding:10px 15px;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.15);font-family:sans-serif;">
+      This is a demo site — for changes and making sites <span style="text-decoration:underline;color:#1a1a1a;font-weight:700;margin-left:4px;">Book Appointment</span>
+    </div>
+    <div style="height:40px;"></div>
+
     <!-- Toast Notification -->
     <div id="toast" class="toast">
         <i class="fas fa-check-circle" style="font-size: 1.5rem; color: var(--success);"></i>
@@ -1138,7 +1144,7 @@
     <!-- Header -->
     <header>
         <div class="container navbar">
-            <div class="logo" data-router="home" style="cursor: pointer;">
+            <div class="logo" onclick="navigateTo('home')" style="cursor: pointer;">
                 <img src="https://ui-avatars.com/api/?name=Schreiner%20Mechanical%20Inc&background=0f496c&color=ffd04b&size=512" alt="Schreiner Mechanical Inc" class="logo-img"
                     style="height: 50px; width: auto; border-radius: 5px; margin-right: 10px;"> Schreiner Mechanical Inc
             </div>
@@ -1169,7 +1175,7 @@
                 <h1>Professional HVAC contractor Services<br>Done Right.</h1>
                 <p>Schreiner Mechanical Inc provides reliable, high-quality HVAC contractor services for your home and business.</p>
                 <div style="margin-top: 35px;">
-                    <button data-router="booking" class="btn btn-primary" style="margin-right: 15px;">Book
+                    <button onclick="navigateTo('booking')" class="btn btn-primary" style="margin-right: 15px;">Book
                         Online Now</button>
                     <a href="tel:9896526222" class="btn btn-outline">Call (989) 652-6222</a>
                 </div>
@@ -1766,7 +1772,7 @@
                 <p><i class="fas fa-phone-alt"></i> (989) 652-6222</p>
                 <p><i class="fas fa-envelope"></i> contact@google.com</p>
                 <p><i class="fas fa-map-marker-alt"></i> 311 List St, Frankenmuth, MI 48734</p>
-                <button data-router="booking" class="btn btn-warning footer-cta">BOOK NOW</button>
+                <button onclick="navigateTo('booking')" class="btn btn-warning footer-cta">BOOK NOW</button>
             </div>
         </div>
         <div class="footer-bottom">
