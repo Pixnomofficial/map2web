@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Phoenix Pest Control Services - Reliable Pest control service in Nagpur, Maharashtra. 5-Star Rated. Book online or call (555) 000-0000 for a free quote.">
+        content="Phoenix PEST Control Services - Reliable Pest control service in Mumbai, Maharashtra. 5-Star Rated. Book online or call (555) 000-0000 for a free quote.">
     <meta name="keywords"
-        content="Pest control service, [KEYWORD_2], [KEYWORD_3], Phoenix Pest Control Services">
-    <meta name="author" content="Phoenix Pest Control Services">
+        content="Pest control service, [KEYWORD_2], [KEYWORD_3], Phoenix PEST Control Services">
+    <meta name="author" content="Phoenix PEST Control Services">
     <meta property="og:title"
-        content="Phoenix Pest Control Services | Nagpur, Maharashtra - Book Online">
+        content="Phoenix PEST Control Services | Mumbai, Maharashtra - Book Online">
     <meta property="og:description"
-        content="Professional Pest control service services in Nagpur, Maharashtra. 5-star rated. Book online today!">
+        content="Professional Pest control service services in Mumbai, Maharashtra. 5-star rated. Book online today!">
     <meta property="og:type" content="website">
-    <title>Phoenix Pest Control Services | Nagpur, Maharashtra - Book Online</title>
+    <title>Phoenix PEST Control Services | Mumbai, Maharashtra - Book Online</title>
     <link rel="icon" type="image/png" href="logo.png">
 
     <!-- Fonts, Icons & EmailJS -->
@@ -177,7 +177,7 @@
         header {
             background: var(--surface);
             position: sticky;
-            top: 0;
+            top: 40px;
             z-index: 1000;
             box-shadow: var(--shadow-sm);
         }
@@ -209,6 +209,14 @@
             display: flex;
             gap: 20px;
             align-items: center;
+        }
+
+        .nav-btn {
+            background: none;
+            border: none;
+            font: inherit;
+            cursor: pointer;
+            padding: 0;
         }
 
         .nav-link {
@@ -1110,6 +1118,12 @@
 
 <body>
 
+    <!-- Demo Banner -->
+    <div onclick="window.open('https://lonarx.us/appointment.html','_blank')" style="position:fixed;top:0;left:0;width:100%;z-index:99999;background:linear-gradient(90deg,#e8a012,#f0b83a);color:#1a1a1a;text-align:center;padding:10px 15px;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.15);font-family:sans-serif;">
+      This is a demo site — for changes and making sites <span style="text-decoration:underline;color:#1a1a1a;font-weight:700;margin-left:4px;">Book Appointment</span>
+    </div>
+    <div style="height:40px;"></div>
+
     <!-- Toast Notification -->
     <div id="toast" class="toast">
         <i class="fas fa-check-circle" style="font-size: 1.5rem; color: var(--success);"></i>
@@ -1138,23 +1152,25 @@
     <header>
         <div class="container navbar">
             <div class="logo" data-router="home" style="cursor: pointer;">
-                <img src="https://ui-avatars.com/api/?name=Phoenix+Pest+Control+Services&background=0f496c&color=ffd04b&size=512" alt="Phoenix Pest Control Services" class="logo-img"
-                    style="height: 50px; width: auto; border-radius: 5px; margin-right: 10px;"> Phoenix Pest Control Services
+                <img src="https://ui-avatars.com/api/?name=Phoenix+PEST+Control+Services&background=0f496c&color=ffd04b&size=512" alt="Phoenix PEST Control Services" class="logo-img"
+                    style="height: 50px; width: auto; border-radius: 5px; margin-right: 10px;"> Phoenix PEST Control Services
             </div>
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-link active" onclick="navigateTo('home')">Home</li>
-                <li class="nav-link" onclick="navigateTo('about')">About Us</li>
-                <li class="nav-link" onclick="navigateTo('services')">Services</li>
-                <li class="nav-link" onclick="navigateTo('portfolio')">Portfolio</li>
-                <li class="nav-link" onclick="navigateTo('reviews')">Reviews</li>
-                <li class="nav-link" onclick="navigateTo('booking')">Book Online</li>
-                <li class="nav-link" onclick="navigateTo('faqs')">FAQs</li>
-                <li><button onclick="navigateTo('contact')" class="btn btn-primary"
-                        style="padding: 10px 24px; font-size: 0.85rem; border-radius: 8px;">Get Quote</button></li>
-            </ul>
-            <div class="hamburger" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><button class="nav-btn nav-link active" data-router="home" data-target="home">Home</button></li>
+                    <li><button class="nav-btn nav-link" data-router="about" data-target="about">About Us</button></li>
+                    <li><button class="nav-btn nav-link" data-router="services" data-target="services">Services</button></li>
+                    <li><button class="nav-btn nav-link" data-router="portfolio" data-target="portfolio">Portfolio</button></li>
+                    <li><button class="nav-btn nav-link" data-router="reviews" data-target="reviews">Reviews</button></li>
+                    <li><button class="nav-btn nav-link" data-router="booking" data-target="booking">Book Online</button></li>
+                    <li><button class="nav-btn nav-link" data-router="faqs" data-target="faqs">FAQs</button></li>
+                    <li><button data-router="contact" class="btn btn-primary"
+                            style="padding: 10px 24px; font-size: 0.85rem; border-radius: 8px;">Get Quote</button></li>
+                </ul>
+            </nav>
+            <button class="hamburger nav-btn" data-toggle="menu" aria-label="Toggle Navigation">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
         </div>
     </header>
 
@@ -1163,10 +1179,10 @@
         <div class="hero">
             <div class="container">
                 <div class="badge">
-                    <i class="fas fa-star" style="color: #fbbf24;"></i> 5-Star Google Rated in Nagpur, Maharashtra
+                    <i class="fas fa-star" style="color: #fbbf24;"></i> 5-Star Google Rated in Mumbai, Maharashtra
                 </div>
                 <h1>Professional Pest control service Services<br>Done Right.</h1>
-                <p>Phoenix Pest Control Services provides reliable, high-quality Pest control service services for your home and business.</p>
+                <p>Phoenix PEST Control Services provides reliable, high-quality Pest control service services for your home and business.</p>
                 <div style="margin-top: 35px;">
                     <button data-router="booking" class="btn btn-primary" style="margin-right: 15px;">Book
                         Online Now</button>
@@ -1198,7 +1214,7 @@
                 </div>
             </div>
             <div class="text-center" style="margin-top: 40px;">
-                <button onclick="navigateTo('services')" class="btn btn-outline"
+                <button data-router="services" class="btn btn-outline"
                     style="border-color: var(--primary); color: var(--primary);">View All Services</button>
             </div>
         </div>
@@ -1207,7 +1223,7 @@
         <div style="background: white; padding: 80px 0;">
             <div class="container">
                 <div class="section-header">
-                    <h2>Why Choose Phoenix Pest Control Services?</h2>
+                    <h2>Why Choose Phoenix PEST Control Services?</h2>
                     <div class="divider"></div>
                 </div>
                 <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
@@ -1246,9 +1262,9 @@
                     home?</h3>
                 <p style="margin-bottom: 30px; color: var(--text-muted); font-size: 1.1rem;">Get professional and
                     reliable service, start to finish.</p>
-                <button onclick="navigateTo('contact')" class="btn btn-primary" style="margin-right: 15px;">Book an
+                <button data-router="contact" class="btn btn-primary" style="margin-right: 15px;">Book an
                     Appointment</button>
-                <button onclick="navigateTo('services')" class="btn btn-outline"
+                <button data-router="services" class="btn btn-outline"
                     style="border-color: var(--primary); color: var(--primary);">Explore Services</button>
             </div>
         </div>
@@ -1260,19 +1276,19 @@
             <div class="about-grid">
                 <div class="about-img">
                     <img src="https://images.pexels.com/photos/4099468/pexels-photo-4099468.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-                        alt="Phoenix Pest Control Services professional work">
+                        alt="Phoenix PEST Control Services professional work">
                 </div>
                 <div>
                     <div class="section-header" style="text-align: left; margin-bottom: 30px;">
-                        <h2>About Phoenix Pest Control Services</h2>
+                        <h2>About Phoenix PEST Control Services</h2>
                         <div class="divider" style="margin: 15px 0;"></div>
                     </div>
                     <p style="margin-bottom: 20px; font-size: 1.1rem; color: var(--text-main);">
-                        We are a locally owned and operated Pest control service business serving <strong>Nagpur, Maharashtra</strong>
+                        We are a locally owned and operated Pest control service business serving <strong>Mumbai, Maharashtra</strong>
                         and the surrounding areas.
                     </p>
                     <p style="margin-bottom: 30px; color: var(--text-muted);">
-                        At Phoenix Pest Control Services, we believe in honest work at fair prices. We
+                        At Phoenix PEST Control Services, we believe in honest work at fair prices. We
                         understand
                         that inviting someone into your home requires trust, which is why we treat every project
                         with the utmost respect and care.
@@ -1294,7 +1310,7 @@
                     project</h3>
                 <p style="margin-bottom: 30px; color: var(--text-muted);">We'd love to add you to our list of satisfied
                     customers.</p>
-                <button onclick="navigateTo('contact')" class="btn btn-primary">Get a Quote</button>
+                <button data-router="contact" class="btn btn-primary">Get a Quote</button>
             </div>
         </div>
     </section>
@@ -1343,7 +1359,7 @@
             </div>
 
             <div class="text-center" style="margin-top: 60px;">
-                <button onclick="navigateTo('contact')" class="btn btn-primary">Book a Service Online</button>
+                <button data-router="contact" class="btn btn-primary">Book a Service Online</button>
             </div>
         </div>
     </section>
@@ -1360,27 +1376,27 @@
 
             <div class="gallery-grid">
                 <a href="javascript:void(0)" class="gallery-item">
-                    <img src="https://images.pexels.com/photos/4097848/pexels-photo-4097848.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Phoenix Pest Control Services Project 1">
+                    <img src="https://images.pexels.com/photos/4097848/pexels-photo-4097848.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Phoenix PEST Control Services Project 1">
                     <div class="gallery-overlay"><span>View Project</span></div>
                 </a>
                 <a href="javascript:void(0)" class="gallery-item">
-                    <img src="https://images.pexels.com/photos/4176608/pexels-photo-4176608.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Phoenix Pest Control Services Project 2">
+                    <img src="https://images.pexels.com/photos/4176608/pexels-photo-4176608.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Phoenix PEST Control Services Project 2">
                     <div class="gallery-overlay"><span>View Project</span></div>
                 </a>
                 <a href="javascript:void(0)" class="gallery-item">
-                    <img src="https://images.pexels.com/photos/4176006/pexels-photo-4176006.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Phoenix Pest Control Services Project 3">
+                    <img src="https://images.pexels.com/photos/4176006/pexels-photo-4176006.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Phoenix PEST Control Services Project 3">
                     <div class="gallery-overlay"><span>View Project</span></div>
                 </a>
                 <a href="javascript:void(0)" class="gallery-item">
-                    <img src="https://images.pexels.com/photos/6474117/pexels-photo-6474117.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Phoenix Pest Control Services Project 4">
+                    <img src="https://images.pexels.com/photos/6474117/pexels-photo-6474117.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Phoenix PEST Control Services Project 4">
                     <div class="gallery-overlay"><span>View Project</span></div>
                 </a>
                 <a href="javascript:void(0)" class="gallery-item">
-                    <img src="https://images.pexels.com/photos/4114442/pexels-photo-4114442.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Phoenix Pest Control Services Project 5">
+                    <img src="https://images.pexels.com/photos/4114442/pexels-photo-4114442.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Phoenix PEST Control Services Project 5">
                     <div class="gallery-overlay"><span>View Project</span></div>
                 </a>
                 <a href="javascript:void(0)" class="gallery-item">
-                    <img src="https://images.pexels.com/photos/3993240/pexels-photo-3993240.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Phoenix Pest Control Services Project 6">
+                    <img src="https://images.pexels.com/photos/3993240/pexels-photo-3993240.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Phoenix PEST Control Services Project 6">
                     <div class="gallery-overlay"><span>View Project</span></div>
                 </a>
             </div>
@@ -1389,7 +1405,7 @@
                 style="margin-top: 60px; text-align: center; background: white; padding: 50px; border-radius: var(--radius); box-shadow: var(--shadow-lg);">
                 <h3 style="margin-bottom: 20px; color: var(--primary-dark); font-size: 1.8rem;">Like what you see?</h3>
                 <p style="margin-bottom: 30px; color: var(--text-muted);">Let's bring your next project to life.</p>
-                <button onclick="navigateTo('contact')" class="btn btn-primary">Book Now</button>
+                <button data-router="contact" class="btn btn-primary">Book Now</button>
             </div>
         </div>
     </section>
@@ -1423,7 +1439,7 @@
                             class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                             class="fas fa-star"></i></div>
                     <p style="font-size: 0.95rem; margin-bottom: 15px; color: var(--text-main);">"Fixed my window
-                        perfectly. I can't even tell there's glass there. Highly recommend Phoenix Pest Control Services Professional Window
+                        perfectly. I can't even tell there's glass there. Highly recommend Phoenix PEST Control Services Professional Window
                         Cleaning Services LLC."
                     </p>
                     <strong style="color: var(--primary-dark);">- Mike T.</strong>
@@ -1505,7 +1521,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <strong>Location</strong><br>
-                            <span style="color: rgba(255,255,255,0.8);">Serving Nagpur, Maharashtra, CO, USA</span>
+                            <span style="color: rgba(255,255,255,0.8);">Serving Mumbai, Maharashtra, CO, USA</span>
                         </div>
                     </div>
 
@@ -1555,7 +1571,7 @@
                         <div class="form-group">
                             <label class="form-label" style="color: #e2e8f0;">Address *</label>
                             <input type="text" id="contactAddress" class="form-control"
-                                placeholder="123 Main St, Nagpur, Maharashtra 80020" required
+                                placeholder="123 Main St, Mumbai, Maharashtra 80020" required
                                 style="background: #2a2a3e; border-color: #3a3a4e; color: white;">
                         </div>
                         <!-- Email (optional) -->
@@ -1627,7 +1643,7 @@
                     <h3 style="color: var(--primary-dark); margin-bottom: 15px; font-size: 1.1rem;">What areas do you
                         serve?</h3>
                     <p style="color: var(--text-muted); line-height: 1.6;">We provide Pest control service services
-                        throughout Nagpur, Maharashtra. For service areas outside these cities, please contact us to discuss
+                        throughout Mumbai, Maharashtra. For service areas outside these cities, please contact us to discuss
                         availability.</p>
                 </div>
 
@@ -1659,7 +1675,7 @@
                     style="background: white; padding: 25px; margin-bottom: 20px; border-radius: var(--radius); box-shadow: var(--shadow-sm); border-left: 4px solid var(--secondary);">
                     <h3 style="color: var(--primary-dark); margin-bottom: 15px; font-size: 1.1rem;">Are you licensed and
                         insured?</h3>
-                    <p style="color: var(--text-muted); line-height: 1.6;">Yes! Phoenix Pest Control Services is fully licensed
+                    <p style="color: var(--text-muted); line-height: 1.6;">Yes! Phoenix PEST Control Services is fully licensed
                         and fully insured. We take safety seriously and maintain comprehensive liability coverage for
                         all our
                         work. Your home and property are protected with us.</p>
@@ -1724,8 +1740,8 @@
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-col brand-col">
-                <h4 class="footer-logo">Phoenix Pest Control Services</h4>
-                <p>Your trusted Pest control service service in Nagpur, Maharashtra, CO, USA. Professional,
+                <h4 class="footer-logo">Phoenix PEST Control Services</h4>
+                <p>Your trusted Pest control service service in Mumbai, Maharashtra, CO, USA. Professional,
                     reliable, and affordable home
                     services.
                 </p>
@@ -1738,25 +1754,25 @@
             <div class="footer-col links-col">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><span class="footer-link" onclick="navigateTo('home')">Home</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('about')">About Us</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Services</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('portfolio')">Portfolio</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('reviews')">Reviews</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('booking')">Book Online</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('faqs')">FAQs</span></li>
+                    <li><span class="footer-link" data-router="home">Home</span></li>
+                    <li><span class="footer-link" data-router="about">About Us</span></li>
+                    <li><span class="footer-link" data-router="services">Services</span></li>
+                    <li><span class="footer-link" data-router="portfolio">Portfolio</span></li>
+                    <li><span class="footer-link" data-router="reviews">Reviews</span></li>
+                    <li><span class="footer-link" data-router="booking">Book Online</span></li>
+                    <li><span class="footer-link" data-router="faqs">FAQs</span></li>
                 </ul>
             </div>
             <div class="footer-col services-col">
                 <h4>Services</h4>
                 <ul>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Residential Pest control service</span>
+                    <li><span class="footer-link" data-router="services">Residential Pest control service</span>
                     </li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Emergency Service</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Support & Follow-up</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Custom Solutions</span>
+                    <li><span class="footer-link" data-router="services">Emergency Service</span></li>
+                    <li><span class="footer-link" data-router="services">Support & Follow-up</span></li>
+                    <li><span class="footer-link" data-router="services">Custom Solutions</span>
                     </li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Commercial Pest control service</span>
+                    <li><span class="footer-link" data-router="services">Commercial Pest control service</span>
                     </li>
                 </ul>
             </div>
@@ -1764,13 +1780,13 @@
                 <h4>Contact</h4>
                 <p><i class="fas fa-phone-alt"></i> (555) 000-0000</p>
                 <p><i class="fas fa-envelope"></i> contact@phoenixpestcontrolservices.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> Shivaji Complex, New Mankapur, Nagpur, Maharashtra 440030, India</p>
+                <p><i class="fas fa-map-marker-alt"></i> Shop No.209, New Apollo industrial Estate, Mogra Ln, Mogra Village, Mogra Pada, Natwar Nagar, Andheri East, Mumbai, Maharashtra 400069, India</p>
                 <button data-router="booking" class="btn btn-warning footer-cta">BOOK NOW</button>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container bottom-content">
-                <p>&copy; 2026 Phoenix Pest Control Services. All Rights Reserved.</p>
+                <p>&copy; 2026 Phoenix PEST Control Services. All Rights Reserved.</p>
                 <p class="branding-line">Made with ❤️ by <a href="https://lonarx.us/" target="_blank">lonarx.us</a></p>
             </div>
         </div>
@@ -1780,7 +1796,7 @@
     <div class="chatbot-window" id="chatbotWindow">
         <div class="chatbot-header">
             <div>
-                <strong>Phoenix Pest Control ServicesAssistant</strong>
+                <strong>Phoenix PEST Control ServicesAssistant</strong>
                 <div style="font-size: 0.75rem; opacity: 0.8;">Online Available Daily Local Time</div>
             </div>
             <button class="chatbot-close" onclick="toggleChatbot()">
@@ -1790,7 +1806,7 @@
         <div class="chatbot-messages" id="chatMessages">
             <div class="chat-message bot">
                 <div class="message-bubble">
-                    Hi! I'm the Phoenix Pest Control Services AI assistant. How can I help you today?
+                    Hi! I'm the Phoenix PEST Control Services AI assistant. How can I help you today?
                     <div style="margin-top: 15px; display: flex; flex-direction: column; gap: 8px;">
                         <button onclick="askBot('What services do you offer?')"
                             style="background: var(--bg-body); border: none; padding: 10px; border-radius: 8px; cursor: pointer; text-align: left; font-size: 0.85rem;">📋
@@ -1826,23 +1842,23 @@
 
     <!-- MOBILE NAV BOTTOM -->
     <nav class="mobile-bar">
-        <button class="nav-btn mobile-link active" data-target="home" onclick="navigateTo('home')">
+        <button class="nav-btn mobile-link active" data-target="home" data-router="home">
             <i class="fas fa-home" aria-hidden="true"></i>Home
         </button>
-        <button class="nav-btn mobile-link" data-target="services" onclick="navigateTo('services')">
+        <button class="nav-btn mobile-link" data-target="services" data-router="services">
             <i class="fas fa-broom" aria-hidden="true"></i>Services
         </button>
-        <button class="nav-btn mobile-link" data-target="home" onclick="navigateTo('home')"
+        <button class="nav-btn mobile-link" data-target="home" data-router="home"
             style="transform: translateY(-15px);">
             <div
                 style="background: var(--white); padding: 5px; border-radius:32px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                 <img src="logo.png" alt="Logo" style="height: 45px; width: auto; border-radius: 4px; display: block;">
             </div>
         </button>
-        <button class="nav-btn mobile-link" data-target="portfolio" onclick="navigateTo('portfolio')">
+        <button class="nav-btn mobile-link" data-target="portfolio" data-router="portfolio">
             <i class="fas fa-images" aria-hidden="true"></i>Portfolio
         </button>
-        <button class="nav-btn mobile-link" data-target="booking" onclick="navigateTo('booking')">
+        <button class="nav-btn mobile-link" data-target="booking" data-router="booking">
             <i class="fas fa-calendar-check" aria-hidden="true"></i>Book
         </button>
     </nav>
@@ -1977,7 +1993,7 @@
         const EMAILJS_CUSTOMER_TEMPLATE = 'template_1v0dbro'; // Auto-Reply - goes to customer
 
         // Initialize EmailJS
-        emailjs.init(EMAILJS_PUBLIC_KEY);
+        if (typeof emailjs !== 'undefined') { emailjs.init(EMAILJS_PUBLIC_KEY); }
 
         async function submitContactForm(e) {
             e.preventDefault();
@@ -2193,9 +2209,41 @@
             }
         });
 
+        // Event delegation for data-router navigation (matches tier1/tier2 pattern)
+        document.addEventListener('click', function(e) {
+            const routerBtn = e.target.closest('[data-router]');
+            if (routerBtn) {
+                e.preventDefault();
+                navigateTo(routerBtn.getAttribute('data-router'));
+            }
+
+            // Handle mobile menu toggle
+            const toggleMenuBtn = e.target.closest('[data-toggle="menu"]');
+            if (toggleMenuBtn) {
+                e.preventDefault();
+                toggleMenu();
+            }
+
+            const closeModalBtn = e.target.closest('[data-close-modal]');
+            if (closeModalBtn) {
+                closeServiceModal();
+            }
+
+            const serviceCard = e.target.closest('[data-service-key]');
+            if (serviceCard) {
+                openServiceModal(serviceCard.getAttribute('data-service-key'));
+            }
+
+            const modalBookBtn = e.target.closest('[data-modal-action="book"]');
+            if (modalBookBtn) {
+                closeServiceModal();
+                navigateTo('booking');
+            }
+        });
+
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function () {
-            console.log('Phoenix Pest Control Services Website Loaded - Tier 3');
+            console.log('Phoenix PEST Control Services Website Loaded - Tier 3');
         });
     </script>
 </body>
