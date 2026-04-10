@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Nandu Electrical Works - Reliable  in Mumbai, Maharashtra. 5-Star Rated. Book online or call (555) 000-0000 for a free quote.">
+        content="Nandu Electrical Works - Reliable Air conditioning repair service in Mumbai, Maharashtra. 5-Star Rated. Book online or call (555) 000-0000 for a free quote.">
     <meta name="keywords"
-        content=", [KEYWORD_2], [KEYWORD_3], Nandu Electrical Works">
+        content="Air conditioning repair service, [KEYWORD_2], [KEYWORD_3], Nandu Electrical Works">
     <meta name="author" content="Nandu Electrical Works">
     <meta property="og:title"
         content="Nandu Electrical Works | Mumbai, Maharashtra - Book Online">
     <meta property="og:description"
-        content="Professional  services in Mumbai, Maharashtra. 5-star rated. Book online today!">
+        content="Professional Air conditioning repair service services in Mumbai, Maharashtra. 5-star rated. Book online today!">
     <meta property="og:type" content="website">
     <title>Nandu Electrical Works | Mumbai, Maharashtra - Book Online</title>
     <link rel="icon" type="image/png" href="logo.png">
@@ -177,7 +177,7 @@
         header {
             background: var(--surface);
             position: sticky;
-            top: 0;
+            top: 40px;
             z-index: 1000;
             box-shadow: var(--shadow-sm);
         }
@@ -209,6 +209,14 @@
             display: flex;
             gap: 20px;
             align-items: center;
+        }
+
+        .nav-btn {
+            background: none;
+            border: none;
+            font: inherit;
+            cursor: pointer;
+            padding: 0;
         }
 
         .nav-link {
@@ -256,7 +264,7 @@
 
         /* --- 5. HOME HERO --- */
         .hero {
-            background: linear-gradient(135deg, rgba(15, 73, 108, 0.92), rgba(15, 73, 108, 0.8)), url('https://images.pexels.com/photos/21812146/pexels-photo-21812146.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop');
+            background: linear-gradient(135deg, rgba(15, 73, 108, 0.92), rgba(15, 73, 108, 0.8)), url('https://images.pexels.com/photos/27134985/pexels-photo-27134985.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop');
             background-size: cover;
             background-position: center;
             color: white;
@@ -1110,6 +1118,12 @@
 
 <body>
 
+    <!-- Demo Banner -->
+    <div onclick="window.open('https://lonarx.us/appointment.html','_blank')" style="position:fixed;top:0;left:0;width:100%;z-index:99999;background:linear-gradient(90deg,#e8a012,#f0b83a);color:#1a1a1a;text-align:center;padding:10px 15px;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.15);font-family:sans-serif;">
+      This is a demo site — for changes and making sites <span style="text-decoration:underline;color:#1a1a1a;font-weight:700;margin-left:4px;">Book Appointment</span>
+    </div>
+    <div style="height:40px;"></div>
+
     <!-- Toast Notification -->
     <div id="toast" class="toast">
         <i class="fas fa-check-circle" style="font-size: 1.5rem; color: var(--success);"></i>
@@ -1141,20 +1155,22 @@
                 <img src="https://ui-avatars.com/api/?name=Nandu+Electrical+Works&background=0f496c&color=ffd04b&size=512" alt="Nandu Electrical Works" class="logo-img"
                     style="height: 50px; width: auto; border-radius: 5px; margin-right: 10px;"> Nandu Electrical Works
             </div>
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-link active" onclick="navigateTo('home')">Home</li>
-                <li class="nav-link" onclick="navigateTo('about')">About Us</li>
-                <li class="nav-link" onclick="navigateTo('services')">Services</li>
-                <li class="nav-link" onclick="navigateTo('portfolio')">Portfolio</li>
-                <li class="nav-link" onclick="navigateTo('reviews')">Reviews</li>
-                <li class="nav-link" onclick="navigateTo('booking')">Book Online</li>
-                <li class="nav-link" onclick="navigateTo('faqs')">FAQs</li>
-                <li><button onclick="navigateTo('contact')" class="btn btn-primary"
-                        style="padding: 10px 24px; font-size: 0.85rem; border-radius: 8px;">Get Quote</button></li>
-            </ul>
-            <div class="hamburger" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><button class="nav-btn nav-link active" data-router="home" data-target="home">Home</button></li>
+                    <li><button class="nav-btn nav-link" data-router="about" data-target="about">About Us</button></li>
+                    <li><button class="nav-btn nav-link" data-router="services" data-target="services">Services</button></li>
+                    <li><button class="nav-btn nav-link" data-router="portfolio" data-target="portfolio">Portfolio</button></li>
+                    <li><button class="nav-btn nav-link" data-router="reviews" data-target="reviews">Reviews</button></li>
+                    <li><button class="nav-btn nav-link" data-router="booking" data-target="booking">Book Online</button></li>
+                    <li><button class="nav-btn nav-link" data-router="faqs" data-target="faqs">FAQs</button></li>
+                    <li><button data-router="contact" class="btn btn-primary"
+                            style="padding: 10px 24px; font-size: 0.85rem; border-radius: 8px;">Get Quote</button></li>
+                </ul>
+            </nav>
+            <button class="hamburger nav-btn" data-toggle="menu" aria-label="Toggle Navigation">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
         </div>
     </header>
 
@@ -1165,8 +1181,8 @@
                 <div class="badge">
                     <i class="fas fa-star" style="color: #fbbf24;"></i> 5-Star Google Rated in Mumbai, Maharashtra
                 </div>
-                <h1>Professional  Services<br>Done Right.</h1>
-                <p>Nandu Electrical Works provides reliable, high-quality  services for your home and business.</p>
+                <h1>Professional Air conditioning repair service Services<br>Done Right.</h1>
+                <p>Nandu Electrical Works provides reliable, high-quality Air conditioning repair service services for your home and business.</p>
                 <div style="margin-top: 35px;">
                     <button data-router="booking" class="btn btn-primary" style="margin-right: 15px;">Book
                         Online Now</button>
@@ -1183,8 +1199,8 @@
             <div class="grid services-container">
                 <div class="service-card" data-service-key="commercial" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-building"></i></div>
-                    <h3>Commercial </h3>
-                    <p>Professional  tailored for your business or office.</p>
+                    <h3>Commercial Air conditioning repair service</h3>
+                    <p>Professional Air conditioning repair service tailored for your business or office.</p>
                 </div>
                 <div class="service-card" data-service-key="glass" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-spray-can-sparkles"></i></div>
@@ -1194,11 +1210,11 @@
                 <div class="service-card" data-service-key="washing" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-shower"></i></div>
                     <h3>Electrical Inspections</h3>
-                    <p>General  services for top-quality results.</p>
+                    <p>General Air conditioning repair service services for top-quality results.</p>
                 </div>
             </div>
             <div class="text-center" style="margin-top: 40px;">
-                <button onclick="navigateTo('services')" class="btn btn-outline"
+                <button data-router="services" class="btn btn-outline"
                     style="border-color: var(--primary); color: var(--primary);">View All Services</button>
             </div>
         </div>
@@ -1246,9 +1262,9 @@
                     home?</h3>
                 <p style="margin-bottom: 30px; color: var(--text-muted); font-size: 1.1rem;">Get professional and
                     reliable service, start to finish.</p>
-                <button onclick="navigateTo('contact')" class="btn btn-primary" style="margin-right: 15px;">Book an
+                <button data-router="contact" class="btn btn-primary" style="margin-right: 15px;">Book an
                     Appointment</button>
-                <button onclick="navigateTo('services')" class="btn btn-outline"
+                <button data-router="services" class="btn btn-outline"
                     style="border-color: var(--primary); color: var(--primary);">Explore Services</button>
             </div>
         </div>
@@ -1259,7 +1275,7 @@
         <div class="section-padding container">
             <div class="about-grid">
                 <div class="about-img">
-                    <img src="https://images.pexels.com/photos/5691590/pexels-photo-5691590.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                    <img src="https://images.pexels.com/photos/16848596/pexels-photo-16848596.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
                         alt="Nandu Electrical Works professional work">
                 </div>
                 <div>
@@ -1268,7 +1284,7 @@
                         <div class="divider" style="margin: 15px 0;"></div>
                     </div>
                     <p style="margin-bottom: 20px; font-size: 1.1rem; color: var(--text-main);">
-                        We are a locally owned and operated  business serving <strong>Mumbai, Maharashtra</strong>
+                        We are a locally owned and operated Air conditioning repair service business serving <strong>Mumbai, Maharashtra</strong>
                         and the surrounding areas.
                     </p>
                     <p style="margin-bottom: 30px; color: var(--text-muted);">
@@ -1294,7 +1310,7 @@
                     project</h3>
                 <p style="margin-bottom: 30px; color: var(--text-muted);">We'd love to add you to our list of satisfied
                     customers.</p>
-                <button onclick="navigateTo('contact')" class="btn btn-primary">Get a Quote</button>
+                <button data-router="contact" class="btn btn-primary">Get a Quote</button>
             </div>
         </div>
     </section>
@@ -1312,8 +1328,8 @@
             <div class="grid services-container">
                 <div class="service-card" onclick="openServiceModal('commercial')" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-building"></i></div>
-                    <h3>Commercial </h3>
-                    <p>Professional  tailored for your business or office.</p>
+                    <h3>Commercial Air conditioning repair service</h3>
+                    <p>Professional Air conditioning repair service tailored for your business or office.</p>
                 </div>
                 <div class="service-card" onclick="openServiceModal('glass')" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-spray-can-sparkles"></i></div>
@@ -1323,17 +1339,17 @@
                 <div class="service-card" onclick="openServiceModal('washing')" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-shower"></i></div>
                     <h3>Electrical Inspections</h3>
-                    <p>General  services for top-quality results.</p>
+                    <p>General Air conditioning repair service services for top-quality results.</p>
                 </div>
                 <div class="service-card" onclick="openServiceModal('residential')" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-broom"></i></div>
-                    <h3>Residential </h3>
+                    <h3>Residential Air conditioning repair service</h3>
                     <p>Keep your home's windows spotless and bright year-round.</p>
                 </div>
                 <div class="service-card" onclick="openServiceModal('interior-exterior')" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-window-maximize"></i></div>
-                    <h3>Interior and exterior </h3>
-                    <p>Comprehensive  both inside and outside your property.</p>
+                    <h3>Interior and exterior Air conditioning repair service</h3>
+                    <p>Comprehensive Air conditioning repair service both inside and outside your property.</p>
                 </div>
                 <div class="service-card" onclick="openServiceModal('rooftop')" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-border-all"></i></div>
@@ -1343,7 +1359,7 @@
             </div>
 
             <div class="text-center" style="margin-top: 60px;">
-                <button onclick="navigateTo('contact')" class="btn btn-primary">Book a Service Online</button>
+                <button data-router="contact" class="btn btn-primary">Book a Service Online</button>
             </div>
         </div>
     </section>
@@ -1360,27 +1376,27 @@
 
             <div class="gallery-grid">
                 <a href="javascript:void(0)" class="gallery-item">
-                    <img src="https://images.pexels.com/photos/27928762/pexels-photo-27928762.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Nandu Electrical Works Project 1">
+                    <img src="https://images.pexels.com/photos/20046693/pexels-photo-20046693.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Nandu Electrical Works Project 1">
                     <div class="gallery-overlay"><span>View Project</span></div>
                 </a>
                 <a href="javascript:void(0)" class="gallery-item">
-                    <img src="https://images.pexels.com/photos/28950842/pexels-photo-28950842.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Nandu Electrical Works Project 2">
+                    <img src="https://images.pexels.com/photos/20046692/pexels-photo-20046692.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Nandu Electrical Works Project 2">
                     <div class="gallery-overlay"><span>View Project</span></div>
                 </a>
                 <a href="javascript:void(0)" class="gallery-item">
-                    <img src="https://images.pexels.com/photos/4981793/pexels-photo-4981793.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Nandu Electrical Works Project 3">
+                    <img src="https://images.pexels.com/photos/19741052/pexels-photo-19741052.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Nandu Electrical Works Project 3">
                     <div class="gallery-overlay"><span>View Project</span></div>
                 </a>
                 <a href="javascript:void(0)" class="gallery-item">
-                    <img src="https://images.pexels.com/photos/4981794/pexels-photo-4981794.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Nandu Electrical Works Project 4">
+                    <img src="https://images.pexels.com/photos/20046694/pexels-photo-20046694.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Nandu Electrical Works Project 4">
                     <div class="gallery-overlay"><span>View Project</span></div>
                 </a>
                 <a href="javascript:void(0)" class="gallery-item">
-                    <img src="https://images.pexels.com/photos/5691642/pexels-photo-5691642.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Nandu Electrical Works Project 5">
+                    <img src="https://images.pexels.com/photos/5539540/pexels-photo-5539540.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Nandu Electrical Works Project 5">
                     <div class="gallery-overlay"><span>View Project</span></div>
                 </a>
                 <a href="javascript:void(0)" class="gallery-item">
-                    <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Nandu Electrical Works Project 6">
+                    <img src="https://images.pexels.com/photos/3964692/pexels-photo-3964692.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Nandu Electrical Works Project 6">
                     <div class="gallery-overlay"><span>View Project</span></div>
                 </a>
             </div>
@@ -1389,7 +1405,7 @@
                 style="margin-top: 60px; text-align: center; background: white; padding: 50px; border-radius: var(--radius); box-shadow: var(--shadow-lg);">
                 <h3 style="margin-bottom: 20px; color: var(--primary-dark); font-size: 1.8rem;">Like what you see?</h3>
                 <p style="margin-bottom: 30px; color: var(--text-muted);">Let's bring your next project to life.</p>
-                <button onclick="navigateTo('contact')" class="btn btn-primary">Book Now</button>
+                <button data-router="contact" class="btn btn-primary">Book Now</button>
             </div>
         </div>
     </section>
@@ -1441,7 +1457,7 @@
                             class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                             class="fas fa-star"></i></div>
                     <p style="font-size: 0.95rem; margin-bottom: 15px; color: var(--text-main);">"The online booking
-                        made it so easy! Got a confirmation email right away and the  job was done
+                        made it so easy! Got a confirmation email right away and the Air conditioning repair service job was done
                         perfectly."</p>
                     <strong style="color: var(--primary-dark);">- Jennifer K.</strong>
                 </div>
@@ -1452,7 +1468,7 @@
                 style="text-align: center; margin-top: 60px; background: white; padding: 50px; border-radius: var(--radius); box-shadow: var(--shadow-lg);">
                 <h3 style="margin-bottom: 20px; color: var(--primary-dark);">Love Our Service?</h3>
                 <p style="margin-bottom: 30px; color: var(--text-muted);">Share your experience and help others find
-                    quality  services!</p>
+                    quality Air conditioning repair service services!</p>
                 <a href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK/review" target="_blank" class="btn btn-primary">
                     <i class="fas fa-star"></i> Leave a Google Review
                 </a>
@@ -1466,7 +1482,7 @@
             <div class="section-header">
                 <h2>Book Your Service Online</h2>
                 <div class="divider"></div>
-                <p style="margin-top: 15px; color: var(--text-muted);">Schedule your  appointment
+                <p style="margin-top: 15px; color: var(--text-muted);">Schedule your Air conditioning repair service appointment
                     instantly. Our booking system is available Available Daily Local Time.</p>
             </div>
 
@@ -1571,11 +1587,11 @@
                             <select id="contactService" class="form-control"
                                 style="background: #2a2a3e; border-color: #3a3a4e; color: white; appearance: auto;">
                                 <option value="" style="color: #999;">Select service...</option>
-                                <option value="Commercial ">Commercial </option>
+                                <option value="Commercial Air conditioning repair service">Commercial Air conditioning repair service</option>
                                 <option value="Outlet & Switch Repair">Outlet & Switch Repair</option>
                                 <option value="Electrical Inspections">Electrical Inspections</option>
-                                <option value="Residential ">Residential </option>
-                                <option value="Interior and exterior ">Interior and exterior window
+                                <option value="Residential Air conditioning repair service">Residential Air conditioning repair service</option>
+                                <option value="Interior and exterior Air conditioning repair service">Interior and exterior window
                                     cleaning</option>
                                 <option value="Generator Installation">Generator Installation</option>
                             </select>
@@ -1626,7 +1642,7 @@
                     style="background: white; padding: 25px; margin-bottom: 20px; border-radius: var(--radius); box-shadow: var(--shadow-sm); border-left: 4px solid var(--secondary);">
                     <h3 style="color: var(--primary-dark); margin-bottom: 15px; font-size: 1.1rem;">What areas do you
                         serve?</h3>
-                    <p style="color: var(--text-muted); line-height: 1.6;">We provide  services
+                    <p style="color: var(--text-muted); line-height: 1.6;">We provide Air conditioning repair service services
                         throughout Mumbai, Maharashtra. For service areas outside these cities, please contact us to discuss
                         availability.</p>
                 </div>
@@ -1725,7 +1741,7 @@
         <div class="container footer-grid">
             <div class="footer-col brand-col">
                 <h4 class="footer-logo">Nandu Electrical Works</h4>
-                <p>Your trusted  service in Mumbai, Maharashtra, CO, USA. Professional,
+                <p>Your trusted Air conditioning repair service service in Mumbai, Maharashtra, CO, USA. Professional,
                     reliable, and affordable home
                     services.
                 </p>
@@ -1738,25 +1754,25 @@
             <div class="footer-col links-col">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><span class="footer-link" onclick="navigateTo('home')">Home</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('about')">About Us</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Services</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('portfolio')">Portfolio</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('reviews')">Reviews</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('booking')">Book Online</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('faqs')">FAQs</span></li>
+                    <li><span class="footer-link" data-router="home">Home</span></li>
+                    <li><span class="footer-link" data-router="about">About Us</span></li>
+                    <li><span class="footer-link" data-router="services">Services</span></li>
+                    <li><span class="footer-link" data-router="portfolio">Portfolio</span></li>
+                    <li><span class="footer-link" data-router="reviews">Reviews</span></li>
+                    <li><span class="footer-link" data-router="booking">Book Online</span></li>
+                    <li><span class="footer-link" data-router="faqs">FAQs</span></li>
                 </ul>
             </div>
             <div class="footer-col services-col">
                 <h4>Services</h4>
                 <ul>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Residential </span>
+                    <li><span class="footer-link" data-router="services">Residential Air conditioning repair service</span>
                     </li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Outlet & Switch Repair</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Electrical Inspections</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Generator Installation</span>
+                    <li><span class="footer-link" data-router="services">Outlet & Switch Repair</span></li>
+                    <li><span class="footer-link" data-router="services">Electrical Inspections</span></li>
+                    <li><span class="footer-link" data-router="services">Generator Installation</span>
                     </li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Commercial </span>
+                    <li><span class="footer-link" data-router="services">Commercial Air conditioning repair service</span>
                     </li>
                 </ul>
             </div>
@@ -1764,7 +1780,7 @@
                 <h4>Contact</h4>
                 <p><i class="fas fa-phone-alt"></i> (555) 000-0000</p>
                 <p><i class="fas fa-envelope"></i> contact@nanduelectricalworks.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> 1, New Link Rd, Malad, BMC Colony, Dindoshi, Jogeshwari West, Mumbai, Maharashtra 400064, India</p>
+                <p><i class="fas fa-map-marker-alt"></i> Flat No 703 , Nandu Goswami, Building No 45 , New Malvani Pashchima Society Chatrapati Shivaji Raje Complex, Ekta Nagar, Kandivali West, Mumbai, Maharashtra 400067, India</p>
                 <button data-router="booking" class="btn btn-warning footer-cta">BOOK NOW</button>
             </div>
         </div>
@@ -1826,23 +1842,23 @@
 
     <!-- MOBILE NAV BOTTOM -->
     <nav class="mobile-bar">
-        <button class="nav-btn mobile-link active" data-target="home" onclick="navigateTo('home')">
+        <button class="nav-btn mobile-link active" data-target="home" data-router="home">
             <i class="fas fa-home" aria-hidden="true"></i>Home
         </button>
-        <button class="nav-btn mobile-link" data-target="services" onclick="navigateTo('services')">
+        <button class="nav-btn mobile-link" data-target="services" data-router="services">
             <i class="fas fa-broom" aria-hidden="true"></i>Services
         </button>
-        <button class="nav-btn mobile-link" data-target="home" onclick="navigateTo('home')"
+        <button class="nav-btn mobile-link" data-target="home" data-router="home"
             style="transform: translateY(-15px);">
             <div
                 style="background: var(--white); padding: 5px; border-radius:32px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                 <img src="logo.png" alt="Logo" style="height: 45px; width: auto; border-radius: 4px; display: block;">
             </div>
         </button>
-        <button class="nav-btn mobile-link" data-target="portfolio" onclick="navigateTo('portfolio')">
+        <button class="nav-btn mobile-link" data-target="portfolio" data-router="portfolio">
             <i class="fas fa-images" aria-hidden="true"></i>Portfolio
         </button>
-        <button class="nav-btn mobile-link" data-target="booking" onclick="navigateTo('booking')">
+        <button class="nav-btn mobile-link" data-target="booking" data-router="booking">
             <i class="fas fa-calendar-check" aria-hidden="true"></i>Book
         </button>
     </nav>
@@ -1977,7 +1993,7 @@
         const EMAILJS_CUSTOMER_TEMPLATE = 'template_1v0dbro'; // Auto-Reply - goes to customer
 
         // Initialize EmailJS
-        emailjs.init(EMAILJS_PUBLIC_KEY);
+        if (typeof emailjs !== 'undefined') { emailjs.init(EMAILJS_PUBLIC_KEY); }
 
         async function submitContactForm(e) {
             e.preventDefault();
@@ -2078,7 +2094,7 @@
             message = message.toLowerCase();
 
             if (message.includes('service') || message.includes('offer')) {
-                return "We offer Residential , Commercial , Electrical Inspections, Glass & mirror care, Screen cleaning, Track cleaning, and more! You can view all services on our Services page or book directly online.";
+                return "We offer Residential Air conditioning repair service, Commercial Air conditioning repair service, Electrical Inspections, Glass & mirror care, Screen cleaning, Track cleaning, and more! You can view all services on our Services page or book directly online.";
             }
 
             if (message.includes('book') || message.includes('appointment')) {
@@ -2086,7 +2102,7 @@
             }
 
             if (message.includes('rate') || message.includes('price') || message.includes('cost')) {
-                return "Our rates start at $75/hour for standard . Specific services like Commercial  start at $120. You can see exact pricing when you select a service in our booking system!";
+                return "Our rates start at $75/hour for standard Air conditioning repair service. Specific services like Commercial Air conditioning repair service start at $120. You can see exact pricing when you select a service in our booking system!";
             }
 
             if (message.includes('hour') || message.includes('time') || message.includes('available')) {
@@ -2098,7 +2114,7 @@
         // Service Details Data
         const serviceDetails = {
             commercial: {
-                title: 'Commercial ',
+                title: 'Commercial Air conditioning repair service',
                 details: [
                     'Professional team experienced with office buildings & retail spaces',
                     'Flexible scheduling to minimize business disruption',
@@ -2128,7 +2144,7 @@
                 ]
             },
             residential: {
-                title: 'Residential ',
+                title: 'Residential Air conditioning repair service',
                 details: [
                     'Tailored for single-family homes and properties',
                     'Regular maintenance to keep windows spotless year-round',
@@ -2138,7 +2154,7 @@
                 ]
             },
             'interior-exterior': {
-                title: 'Interior and exterior ',
+                title: 'Interior and exterior Air conditioning repair service',
                 details: [
                     'Complete coverage both inside and outside your property',
                     'Comprehensive solution for total window cleanliness',
@@ -2190,6 +2206,38 @@
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 closeServiceModal();
+            }
+        });
+
+        // Event delegation for data-router navigation (matches tier1/tier2 pattern)
+        document.addEventListener('click', function(e) {
+            const routerBtn = e.target.closest('[data-router]');
+            if (routerBtn) {
+                e.preventDefault();
+                navigateTo(routerBtn.getAttribute('data-router'));
+            }
+
+            // Handle mobile menu toggle
+            const toggleMenuBtn = e.target.closest('[data-toggle="menu"]');
+            if (toggleMenuBtn) {
+                e.preventDefault();
+                toggleMenu();
+            }
+
+            const closeModalBtn = e.target.closest('[data-close-modal]');
+            if (closeModalBtn) {
+                closeServiceModal();
+            }
+
+            const serviceCard = e.target.closest('[data-service-key]');
+            if (serviceCard) {
+                openServiceModal(serviceCard.getAttribute('data-service-key'));
+            }
+
+            const modalBookBtn = e.target.closest('[data-modal-action="book"]');
+            if (modalBookBtn) {
+                closeServiceModal();
+                navigateTo('booking');
             }
         });
 
