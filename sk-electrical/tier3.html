@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="SK Electrical - Reliable Electronics repair shop in Mumbai, Maharashtra. 5-Star Rated. Book online or call +91 99771 14412 for a free quote.">
+        content="Sk electrical - Reliable Electrical repair shop in WestMumbai, Mumbai, Maharashtra. 5-Star Rated. Book online or call (555) 000-0000 for a free quote.">
     <meta name="keywords"
-        content="Electronics repair shop, [KEYWORD_2], [KEYWORD_3], SK Electrical">
-    <meta name="author" content="SK Electrical">
+        content="Electrical repair shop, [KEYWORD_2], [KEYWORD_3], Sk electrical">
+    <meta name="author" content="Sk electrical">
     <meta property="og:title"
-        content="SK Electrical | Mumbai, Maharashtra - Book Online">
+        content="Sk electrical | WestMumbai, Mumbai, Maharashtra - Book Online">
     <meta property="og:description"
-        content="Professional Electronics repair shop services in Mumbai, Maharashtra. 5-star rated. Book online today!">
+        content="Professional Electrical repair shop services in WestMumbai, Mumbai, Maharashtra. 5-star rated. Book online today!">
     <meta property="og:type" content="website">
-    <title>SK Electrical | Mumbai, Maharashtra - Book Online</title>
+    <title>Sk electrical | WestMumbai, Mumbai, Maharashtra - Book Online</title>
     <link rel="icon" type="image/png" href="logo.png">
 
     <!-- Fonts, Icons & EmailJS -->
@@ -177,7 +177,7 @@
         header {
             background: var(--surface);
             position: sticky;
-            top: 0;
+            top: 40px;
             z-index: 1000;
             box-shadow: var(--shadow-sm);
         }
@@ -209,6 +209,14 @@
             display: flex;
             gap: 20px;
             align-items: center;
+        }
+
+        .nav-btn {
+            background: none;
+            border: none;
+            font: inherit;
+            cursor: pointer;
+            padding: 0;
         }
 
         .nav-link {
@@ -1110,6 +1118,12 @@
 
 <body>
 
+    <!-- Demo Banner -->
+    <div onclick="window.open('https://lonarx.us/appointment.html','_blank')" style="position:fixed;top:0;left:0;width:100%;z-index:99999;background:linear-gradient(90deg,#e8a012,#f0b83a);color:#1a1a1a;text-align:center;padding:10px 15px;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.15);font-family:sans-serif;">
+      This is a demo site — for changes and making sites <span style="text-decoration:underline;color:#1a1a1a;font-weight:700;margin-left:4px;">Book Appointment</span>
+    </div>
+    <div style="height:40px;"></div>
+
     <!-- Toast Notification -->
     <div id="toast" class="toast">
         <i class="fas fa-check-circle" style="font-size: 1.5rem; color: var(--success);"></i>
@@ -1138,23 +1152,25 @@
     <header>
         <div class="container navbar">
             <div class="logo" data-router="home" style="cursor: pointer;">
-                <img src="https://ui-avatars.com/api/?name=SK+Electrical&background=0f496c&color=ffd04b&size=512" alt="SK Electrical" class="logo-img"
-                    style="height: 50px; width: auto; border-radius: 5px; margin-right: 10px;"> SK Electrical
+                <img src="https://ui-avatars.com/api/?name=Sk+electrical&background=0f496c&color=ffd04b&size=512" alt="Sk electrical" class="logo-img"
+                    style="height: 50px; width: auto; border-radius: 5px; margin-right: 10px;"> Sk electrical
             </div>
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-link active" onclick="navigateTo('home')">Home</li>
-                <li class="nav-link" onclick="navigateTo('about')">About Us</li>
-                <li class="nav-link" onclick="navigateTo('services')">Services</li>
-                <li class="nav-link" onclick="navigateTo('portfolio')">Portfolio</li>
-                <li class="nav-link" onclick="navigateTo('reviews')">Reviews</li>
-                <li class="nav-link" onclick="navigateTo('booking')">Book Online</li>
-                <li class="nav-link" onclick="navigateTo('faqs')">FAQs</li>
-                <li><button onclick="navigateTo('contact')" class="btn btn-primary"
-                        style="padding: 10px 24px; font-size: 0.85rem; border-radius: 8px;">Get Quote</button></li>
-            </ul>
-            <div class="hamburger" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><button class="nav-btn nav-link active" data-router="home" data-target="home">Home</button></li>
+                    <li><button class="nav-btn nav-link" data-router="about" data-target="about">About Us</button></li>
+                    <li><button class="nav-btn nav-link" data-router="services" data-target="services">Services</button></li>
+                    <li><button class="nav-btn nav-link" data-router="portfolio" data-target="portfolio">Portfolio</button></li>
+                    <li><button class="nav-btn nav-link" data-router="reviews" data-target="reviews">Reviews</button></li>
+                    <li><button class="nav-btn nav-link" data-router="booking" data-target="booking">Book Online</button></li>
+                    <li><button class="nav-btn nav-link" data-router="faqs" data-target="faqs">FAQs</button></li>
+                    <li><button data-router="contact" class="btn btn-primary"
+                            style="padding: 10px 24px; font-size: 0.85rem; border-radius: 8px;">Get Quote</button></li>
+                </ul>
+            </nav>
+            <button class="hamburger nav-btn" data-toggle="menu" aria-label="Toggle Navigation">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
         </div>
     </header>
 
@@ -1163,14 +1179,14 @@
         <div class="hero">
             <div class="container">
                 <div class="badge">
-                    <i class="fas fa-star" style="color: #fbbf24;"></i> 5-Star Google Rated in Mumbai, Maharashtra
+                    <i class="fas fa-star" style="color: #fbbf24;"></i> 5-Star Google Rated in WestMumbai, Mumbai, Maharashtra
                 </div>
-                <h1>Professional Electronics repair shop Services<br>Done Right.</h1>
-                <p>SK Electrical provides reliable, high-quality Electronics repair shop services for your home and business.</p>
+                <h1>Professional Electrical repair shop Services<br>Done Right.</h1>
+                <p>Sk electrical provides reliable, high-quality Electrical repair shop services for your home and business.</p>
                 <div style="margin-top: 35px;">
                     <button data-router="booking" class="btn btn-primary" style="margin-right: 15px;">Book
                         Online Now</button>
-                    <a href="tel:919977114412" class="btn btn-outline">Call +91 99771 14412</a>
+                    <a href="tel:" class="btn btn-outline">Call (555) 000-0000</a>
                 </div>
             </div>
         </div>
@@ -1183,8 +1199,8 @@
             <div class="grid services-container">
                 <div class="service-card" data-service-key="commercial" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-building"></i></div>
-                    <h3>Commercial Electronics repair shop</h3>
-                    <p>Professional Electronics repair shop tailored for your business or office.</p>
+                    <h3>Commercial Electrical repair shop</h3>
+                    <p>Professional Electrical repair shop tailored for your business or office.</p>
                 </div>
                 <div class="service-card" data-service-key="glass" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-spray-can-sparkles"></i></div>
@@ -1194,11 +1210,11 @@
                 <div class="service-card" data-service-key="washing" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-shower"></i></div>
                     <h3>Electrical Inspections</h3>
-                    <p>General Electronics repair shop services for top-quality results.</p>
+                    <p>General Electrical repair shop services for top-quality results.</p>
                 </div>
             </div>
             <div class="text-center" style="margin-top: 40px;">
-                <button onclick="navigateTo('services')" class="btn btn-outline"
+                <button data-router="services" class="btn btn-outline"
                     style="border-color: var(--primary); color: var(--primary);">View All Services</button>
             </div>
         </div>
@@ -1207,7 +1223,7 @@
         <div style="background: white; padding: 80px 0;">
             <div class="container">
                 <div class="section-header">
-                    <h2>Why Choose SK Electrical?</h2>
+                    <h2>Why Choose Sk electrical?</h2>
                     <div class="divider"></div>
                 </div>
                 <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
@@ -1246,9 +1262,9 @@
                     home?</h3>
                 <p style="margin-bottom: 30px; color: var(--text-muted); font-size: 1.1rem;">Get professional and
                     reliable service, start to finish.</p>
-                <button onclick="navigateTo('contact')" class="btn btn-primary" style="margin-right: 15px;">Book an
+                <button data-router="contact" class="btn btn-primary" style="margin-right: 15px;">Book an
                     Appointment</button>
-                <button onclick="navigateTo('services')" class="btn btn-outline"
+                <button data-router="services" class="btn btn-outline"
                     style="border-color: var(--primary); color: var(--primary);">Explore Services</button>
             </div>
         </div>
@@ -1260,19 +1276,19 @@
             <div class="about-grid">
                 <div class="about-img">
                     <img src="https://images.pexels.com/photos/5691590/pexels-photo-5691590.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-                        alt="SK Electrical professional work">
+                        alt="Sk electrical professional work">
                 </div>
                 <div>
                     <div class="section-header" style="text-align: left; margin-bottom: 30px;">
-                        <h2>About SK Electrical</h2>
+                        <h2>About Sk electrical</h2>
                         <div class="divider" style="margin: 15px 0;"></div>
                     </div>
                     <p style="margin-bottom: 20px; font-size: 1.1rem; color: var(--text-main);">
-                        We are a locally owned and operated Electronics repair shop business serving <strong>Mumbai, Maharashtra</strong>
+                        We are a locally owned and operated Electrical repair shop business serving <strong>WestMumbai, Mumbai, Maharashtra</strong>
                         and the surrounding areas.
                     </p>
                     <p style="margin-bottom: 30px; color: var(--text-muted);">
-                        At SK Electrical, we believe in honest work at fair prices. We
+                        At Sk electrical, we believe in honest work at fair prices. We
                         understand
                         that inviting someone into your home requires trust, which is why we treat every project
                         with the utmost respect and care.
@@ -1294,7 +1310,7 @@
                     project</h3>
                 <p style="margin-bottom: 30px; color: var(--text-muted);">We'd love to add you to our list of satisfied
                     customers.</p>
-                <button onclick="navigateTo('contact')" class="btn btn-primary">Get a Quote</button>
+                <button data-router="contact" class="btn btn-primary">Get a Quote</button>
             </div>
         </div>
     </section>
@@ -1312,8 +1328,8 @@
             <div class="grid services-container">
                 <div class="service-card" onclick="openServiceModal('commercial')" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-building"></i></div>
-                    <h3>Commercial Electronics repair shop</h3>
-                    <p>Professional Electronics repair shop tailored for your business or office.</p>
+                    <h3>Commercial Electrical repair shop</h3>
+                    <p>Professional Electrical repair shop tailored for your business or office.</p>
                 </div>
                 <div class="service-card" onclick="openServiceModal('glass')" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-spray-can-sparkles"></i></div>
@@ -1323,17 +1339,17 @@
                 <div class="service-card" onclick="openServiceModal('washing')" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-shower"></i></div>
                     <h3>Electrical Inspections</h3>
-                    <p>General Electronics repair shop services for top-quality results.</p>
+                    <p>General Electrical repair shop services for top-quality results.</p>
                 </div>
                 <div class="service-card" onclick="openServiceModal('residential')" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-broom"></i></div>
-                    <h3>Residential Electronics repair shop</h3>
+                    <h3>Residential Electrical repair shop</h3>
                     <p>Keep your home's windows spotless and bright year-round.</p>
                 </div>
                 <div class="service-card" onclick="openServiceModal('interior-exterior')" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-window-maximize"></i></div>
-                    <h3>Interior and exterior Electronics repair shop</h3>
-                    <p>Comprehensive Electronics repair shop both inside and outside your property.</p>
+                    <h3>Interior and exterior Electrical repair shop</h3>
+                    <p>Comprehensive Electrical repair shop both inside and outside your property.</p>
                 </div>
                 <div class="service-card" onclick="openServiceModal('rooftop')" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-border-all"></i></div>
@@ -1343,7 +1359,7 @@
             </div>
 
             <div class="text-center" style="margin-top: 60px;">
-                <button onclick="navigateTo('contact')" class="btn btn-primary">Book a Service Online</button>
+                <button data-router="contact" class="btn btn-primary">Book a Service Online</button>
             </div>
         </div>
     </section>
@@ -1360,27 +1376,27 @@
 
             <div class="gallery-grid">
                 <a href="javascript:void(0)" class="gallery-item">
-                    <img src="https://images.pexels.com/photos/27928762/pexels-photo-27928762.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="SK Electrical Project 1">
+                    <img src="https://images.pexels.com/photos/27928762/pexels-photo-27928762.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Sk electrical Project 1">
                     <div class="gallery-overlay"><span>View Project</span></div>
                 </a>
                 <a href="javascript:void(0)" class="gallery-item">
-                    <img src="https://images.pexels.com/photos/28950842/pexels-photo-28950842.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="SK Electrical Project 2">
+                    <img src="https://images.pexels.com/photos/28950842/pexels-photo-28950842.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Sk electrical Project 2">
                     <div class="gallery-overlay"><span>View Project</span></div>
                 </a>
                 <a href="javascript:void(0)" class="gallery-item">
-                    <img src="https://images.pexels.com/photos/4981793/pexels-photo-4981793.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="SK Electrical Project 3">
+                    <img src="https://images.pexels.com/photos/4981793/pexels-photo-4981793.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Sk electrical Project 3">
                     <div class="gallery-overlay"><span>View Project</span></div>
                 </a>
                 <a href="javascript:void(0)" class="gallery-item">
-                    <img src="https://images.pexels.com/photos/4981794/pexels-photo-4981794.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="SK Electrical Project 4">
+                    <img src="https://images.pexels.com/photos/4981794/pexels-photo-4981794.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Sk electrical Project 4">
                     <div class="gallery-overlay"><span>View Project</span></div>
                 </a>
                 <a href="javascript:void(0)" class="gallery-item">
-                    <img src="https://images.pexels.com/photos/5691642/pexels-photo-5691642.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="SK Electrical Project 5">
+                    <img src="https://images.pexels.com/photos/5691642/pexels-photo-5691642.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Sk electrical Project 5">
                     <div class="gallery-overlay"><span>View Project</span></div>
                 </a>
                 <a href="javascript:void(0)" class="gallery-item">
-                    <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="SK Electrical Project 6">
+                    <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Sk electrical Project 6">
                     <div class="gallery-overlay"><span>View Project</span></div>
                 </a>
             </div>
@@ -1389,7 +1405,7 @@
                 style="margin-top: 60px; text-align: center; background: white; padding: 50px; border-radius: var(--radius); box-shadow: var(--shadow-lg);">
                 <h3 style="margin-bottom: 20px; color: var(--primary-dark); font-size: 1.8rem;">Like what you see?</h3>
                 <p style="margin-bottom: 30px; color: var(--text-muted);">Let's bring your next project to life.</p>
-                <button onclick="navigateTo('contact')" class="btn btn-primary">Book Now</button>
+                <button data-router="contact" class="btn btn-primary">Book Now</button>
             </div>
         </div>
     </section>
@@ -1423,7 +1439,7 @@
                             class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                             class="fas fa-star"></i></div>
                     <p style="font-size: 0.95rem; margin-bottom: 15px; color: var(--text-main);">"Fixed my window
-                        perfectly. I can't even tell there's glass there. Highly recommend SK Electrical Professional Window
+                        perfectly. I can't even tell there's glass there. Highly recommend Sk electrical Professional Window
                         Cleaning Services LLC."
                     </p>
                     <strong style="color: var(--primary-dark);">- Mike T.</strong>
@@ -1441,7 +1457,7 @@
                             class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                             class="fas fa-star"></i></div>
                     <p style="font-size: 0.95rem; margin-bottom: 15px; color: var(--text-main);">"The online booking
-                        made it so easy! Got a confirmation email right away and the Electronics repair shop job was done
+                        made it so easy! Got a confirmation email right away and the Electrical repair shop job was done
                         perfectly."</p>
                     <strong style="color: var(--primary-dark);">- Jennifer K.</strong>
                 </div>
@@ -1452,7 +1468,7 @@
                 style="text-align: center; margin-top: 60px; background: white; padding: 50px; border-radius: var(--radius); box-shadow: var(--shadow-lg);">
                 <h3 style="margin-bottom: 20px; color: var(--primary-dark);">Love Our Service?</h3>
                 <p style="margin-bottom: 30px; color: var(--text-muted);">Share your experience and help others find
-                    quality Electronics repair shop services!</p>
+                    quality Electrical repair shop services!</p>
                 <a href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK/review" target="_blank" class="btn btn-primary">
                     <i class="fas fa-star"></i> Leave a Google Review
                 </a>
@@ -1466,7 +1482,7 @@
             <div class="section-header">
                 <h2>Book Your Service Online</h2>
                 <div class="divider"></div>
-                <p style="margin-top: 15px; color: var(--text-muted);">Schedule your Electronics repair shop appointment
+                <p style="margin-top: 15px; color: var(--text-muted);">Schedule your Electrical repair shop appointment
                     instantly. Our booking system is available Available Daily Local Time.</p>
             </div>
 
@@ -1497,7 +1513,7 @@
                         <i class="fas fa-phone-alt"></i>
                         <div>
                             <strong>Phone</strong><br>
-                            <a href="tel:919977114412" style="color: rgba(255,255,255,0.8);">+91 99771 14412</a>
+                            <a href="tel:" style="color: rgba(255,255,255,0.8);">(555) 000-0000</a>
                         </div>
                     </div>
 
@@ -1505,7 +1521,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <strong>Location</strong><br>
-                            <span style="color: rgba(255,255,255,0.8);">Serving Mumbai, Maharashtra, CO, USA</span>
+                            <span style="color: rgba(255,255,255,0.8);">Serving WestMumbai, Mumbai, Maharashtra, CO, USA</span>
                         </div>
                     </div>
 
@@ -1555,7 +1571,7 @@
                         <div class="form-group">
                             <label class="form-label" style="color: #e2e8f0;">Address *</label>
                             <input type="text" id="contactAddress" class="form-control"
-                                placeholder="123 Main St, Mumbai, Maharashtra 80020" required
+                                placeholder="123 Main St, WestMumbai, Mumbai, Maharashtra 80020" required
                                 style="background: #2a2a3e; border-color: #3a3a4e; color: white;">
                         </div>
                         <!-- Email (optional) -->
@@ -1571,11 +1587,11 @@
                             <select id="contactService" class="form-control"
                                 style="background: #2a2a3e; border-color: #3a3a4e; color: white; appearance: auto;">
                                 <option value="" style="color: #999;">Select service...</option>
-                                <option value="Commercial Electronics repair shop">Commercial Electronics repair shop</option>
+                                <option value="Commercial Electrical repair shop">Commercial Electrical repair shop</option>
                                 <option value="Outlet & Switch Repair">Outlet & Switch Repair</option>
                                 <option value="Electrical Inspections">Electrical Inspections</option>
-                                <option value="Residential Electronics repair shop">Residential Electronics repair shop</option>
-                                <option value="Interior and exterior Electronics repair shop">Interior and exterior window
+                                <option value="Residential Electrical repair shop">Residential Electrical repair shop</option>
+                                <option value="Interior and exterior Electrical repair shop">Interior and exterior window
                                     cleaning</option>
                                 <option value="Generator Installation">Generator Installation</option>
                             </select>
@@ -1626,8 +1642,8 @@
                     style="background: white; padding: 25px; margin-bottom: 20px; border-radius: var(--radius); box-shadow: var(--shadow-sm); border-left: 4px solid var(--secondary);">
                     <h3 style="color: var(--primary-dark); margin-bottom: 15px; font-size: 1.1rem;">What areas do you
                         serve?</h3>
-                    <p style="color: var(--text-muted); line-height: 1.6;">We provide Electronics repair shop services
-                        throughout Mumbai, Maharashtra. For service areas outside these cities, please contact us to discuss
+                    <p style="color: var(--text-muted); line-height: 1.6;">We provide Electrical repair shop services
+                        throughout WestMumbai, Mumbai, Maharashtra. For service areas outside these cities, please contact us to discuss
                         availability.</p>
                 </div>
 
@@ -1640,7 +1656,7 @@
                         Local Time
                         daily. Our standard operating days are Daily. Use our online booking system to
                         schedule at your convenience or
-                        call +91 99771 14412.</p>
+                        call (555) 000-0000.</p>
                 </div>
 
                 <!-- FAQ Item 4 -->
@@ -1659,7 +1675,7 @@
                     style="background: white; padding: 25px; margin-bottom: 20px; border-radius: var(--radius); box-shadow: var(--shadow-sm); border-left: 4px solid var(--secondary);">
                     <h3 style="color: var(--primary-dark); margin-bottom: 15px; font-size: 1.1rem;">Are you licensed and
                         insured?</h3>
-                    <p style="color: var(--text-muted); line-height: 1.6;">Yes! SK Electrical is fully licensed
+                    <p style="color: var(--text-muted); line-height: 1.6;">Yes! Sk electrical is fully licensed
                         and fully insured. We take safety seriously and maintain comprehensive liability coverage for
                         all our
                         work. Your home and property are protected with us.</p>
@@ -1713,7 +1729,7 @@
                     <h3 style="color: var(--primary-dark); margin-bottom: 15px; font-size: 1.1rem;">Still have
                         questions?</h3>
                     <p style="color: var(--text-muted); line-height: 1.6;">If you can't find the answer here, feel free
-                        to reach out! Call us at <strong>+91 99771 14412</strong> or use our chat assistant on the
+                        to reach out! Call us at <strong>(555) 000-0000</strong> or use our chat assistant on the
                         website. Our team is available to help with any questions about our services.</p>
                 </div>
             </div>
@@ -1724,8 +1740,8 @@
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-col brand-col">
-                <h4 class="footer-logo">SK Electrical</h4>
-                <p>Your trusted Electronics repair shop service in Mumbai, Maharashtra, CO, USA. Professional,
+                <h4 class="footer-logo">Sk electrical</h4>
+                <p>Your trusted Electrical repair shop service in WestMumbai, Mumbai, Maharashtra, CO, USA. Professional,
                     reliable, and affordable home
                     services.
                 </p>
@@ -1738,39 +1754,39 @@
             <div class="footer-col links-col">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><span class="footer-link" onclick="navigateTo('home')">Home</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('about')">About Us</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Services</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('portfolio')">Portfolio</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('reviews')">Reviews</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('booking')">Book Online</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('faqs')">FAQs</span></li>
+                    <li><span class="footer-link" data-router="home">Home</span></li>
+                    <li><span class="footer-link" data-router="about">About Us</span></li>
+                    <li><span class="footer-link" data-router="services">Services</span></li>
+                    <li><span class="footer-link" data-router="portfolio">Portfolio</span></li>
+                    <li><span class="footer-link" data-router="reviews">Reviews</span></li>
+                    <li><span class="footer-link" data-router="booking">Book Online</span></li>
+                    <li><span class="footer-link" data-router="faqs">FAQs</span></li>
                 </ul>
             </div>
             <div class="footer-col services-col">
                 <h4>Services</h4>
                 <ul>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Residential Electronics repair shop</span>
+                    <li><span class="footer-link" data-router="services">Residential Electrical repair shop</span>
                     </li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Outlet & Switch Repair</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Electrical Inspections</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Generator Installation</span>
+                    <li><span class="footer-link" data-router="services">Outlet & Switch Repair</span></li>
+                    <li><span class="footer-link" data-router="services">Electrical Inspections</span></li>
+                    <li><span class="footer-link" data-router="services">Generator Installation</span>
                     </li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Commercial Electronics repair shop</span>
+                    <li><span class="footer-link" data-router="services">Commercial Electrical repair shop</span>
                     </li>
                 </ul>
             </div>
             <div class="footer-col contact-col">
                 <h4>Contact</h4>
-                <p><i class="fas fa-phone-alt"></i> +91 99771 14412</p>
+                <p><i class="fas fa-phone-alt"></i> (555) 000-0000</p>
                 <p><i class="fas fa-envelope"></i> contact@skelectrical.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> Firdous Compound, G-113, Abdul Hamid St, near NTCC School, Malad, Mahada Layout, Malvani, Malad West, Mumbai, Maharashtra 400095, India</p>
+                <p><i class="fas fa-map-marker-alt"></i> Sita Nagar, Dindayal Upadhyay Marg, opposite Mohamadiya Masjid, BJ Nagar, Jagjivan Ram Nagar, Mulund West, WestMumbai, Mumbai, Maharashtra 400604, India</p>
                 <button data-router="booking" class="btn btn-warning footer-cta">BOOK NOW</button>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container bottom-content">
-                <p>&copy; 2026 SK Electrical. All Rights Reserved.</p>
+                <p>&copy; 2026 Sk electrical. All Rights Reserved.</p>
                 <p class="branding-line">Made with ❤️ by <a href="https://lonarx.us/" target="_blank">lonarx.us</a></p>
             </div>
         </div>
@@ -1780,7 +1796,7 @@
     <div class="chatbot-window" id="chatbotWindow">
         <div class="chatbot-header">
             <div>
-                <strong>SK ElectricalAssistant</strong>
+                <strong>Sk electricalAssistant</strong>
                 <div style="font-size: 0.75rem; opacity: 0.8;">Online Available Daily Local Time</div>
             </div>
             <button class="chatbot-close" onclick="toggleChatbot()">
@@ -1790,7 +1806,7 @@
         <div class="chatbot-messages" id="chatMessages">
             <div class="chat-message bot">
                 <div class="message-bubble">
-                    Hi! I'm the SK Electrical AI assistant. How can I help you today?
+                    Hi! I'm the Sk electrical AI assistant. How can I help you today?
                     <div style="margin-top: 15px; display: flex; flex-direction: column; gap: 8px;">
                         <button onclick="askBot('What services do you offer?')"
                             style="background: var(--bg-body); border: none; padding: 10px; border-radius: 8px; cursor: pointer; text-align: left; font-size: 0.85rem;">📋
@@ -1819,30 +1835,30 @@
         <div class="float-btn chatbot-btn" onclick="toggleChatbot()" title="AI Assistant">
             <i class="fas fa-robot"></i>
         </div>
-        <a href="tel:919977114412" class="float-btn phone-btn" title="Call Now">
+        <a href="tel:" class="float-btn phone-btn" title="Call Now">
             <i class="fas fa-phone"></i>
         </a>
     </div>
 
     <!-- MOBILE NAV BOTTOM -->
     <nav class="mobile-bar">
-        <button class="nav-btn mobile-link active" data-target="home" onclick="navigateTo('home')">
+        <button class="nav-btn mobile-link active" data-target="home" data-router="home">
             <i class="fas fa-home" aria-hidden="true"></i>Home
         </button>
-        <button class="nav-btn mobile-link" data-target="services" onclick="navigateTo('services')">
+        <button class="nav-btn mobile-link" data-target="services" data-router="services">
             <i class="fas fa-broom" aria-hidden="true"></i>Services
         </button>
-        <button class="nav-btn mobile-link" data-target="home" onclick="navigateTo('home')"
+        <button class="nav-btn mobile-link" data-target="home" data-router="home"
             style="transform: translateY(-15px);">
             <div
                 style="background: var(--white); padding: 5px; border-radius:32px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                 <img src="logo.png" alt="Logo" style="height: 45px; width: auto; border-radius: 4px; display: block;">
             </div>
         </button>
-        <button class="nav-btn mobile-link" data-target="portfolio" onclick="navigateTo('portfolio')">
+        <button class="nav-btn mobile-link" data-target="portfolio" data-router="portfolio">
             <i class="fas fa-images" aria-hidden="true"></i>Portfolio
         </button>
-        <button class="nav-btn mobile-link" data-target="booking" onclick="navigateTo('booking')">
+        <button class="nav-btn mobile-link" data-target="booking" data-router="booking">
             <i class="fas fa-calendar-check" aria-hidden="true"></i>Book
         </button>
     </nav>
@@ -1977,7 +1993,7 @@
         const EMAILJS_CUSTOMER_TEMPLATE = 'template_1v0dbro'; // Auto-Reply - goes to customer
 
         // Initialize EmailJS
-        emailjs.init(EMAILJS_PUBLIC_KEY);
+        if (typeof emailjs !== 'undefined') { emailjs.init(EMAILJS_PUBLIC_KEY); }
 
         async function submitContactForm(e) {
             e.preventDefault();
@@ -2078,7 +2094,7 @@
             message = message.toLowerCase();
 
             if (message.includes('service') || message.includes('offer')) {
-                return "We offer Residential Electronics repair shop, Commercial Electronics repair shop, Electrical Inspections, Glass & mirror care, Screen cleaning, Track cleaning, and more! You can view all services on our Services page or book directly online.";
+                return "We offer Residential Electrical repair shop, Commercial Electrical repair shop, Electrical Inspections, Glass & mirror care, Screen cleaning, Track cleaning, and more! You can view all services on our Services page or book directly online.";
             }
 
             if (message.includes('book') || message.includes('appointment')) {
@@ -2086,7 +2102,7 @@
             }
 
             if (message.includes('rate') || message.includes('price') || message.includes('cost')) {
-                return "Our rates start at $75/hour for standard Electronics repair shop. Specific services like Commercial Electronics repair shop start at $120. You can see exact pricing when you select a service in our booking system!";
+                return "Our rates start at $75/hour for standard Electrical repair shop. Specific services like Commercial Electrical repair shop start at $120. You can see exact pricing when you select a service in our booking system!";
             }
 
             if (message.includes('hour') || message.includes('time') || message.includes('available')) {
@@ -2098,7 +2114,7 @@
         // Service Details Data
         const serviceDetails = {
             commercial: {
-                title: 'Commercial Electronics repair shop',
+                title: 'Commercial Electrical repair shop',
                 details: [
                     'Professional team experienced with office buildings & retail spaces',
                     'Flexible scheduling to minimize business disruption',
@@ -2128,7 +2144,7 @@
                 ]
             },
             residential: {
-                title: 'Residential Electronics repair shop',
+                title: 'Residential Electrical repair shop',
                 details: [
                     'Tailored for single-family homes and properties',
                     'Regular maintenance to keep windows spotless year-round',
@@ -2138,7 +2154,7 @@
                 ]
             },
             'interior-exterior': {
-                title: 'Interior and exterior Electronics repair shop',
+                title: 'Interior and exterior Electrical repair shop',
                 details: [
                     'Complete coverage both inside and outside your property',
                     'Comprehensive solution for total window cleanliness',
@@ -2193,9 +2209,41 @@
             }
         });
 
+        // Event delegation for data-router navigation (matches tier1/tier2 pattern)
+        document.addEventListener('click', function(e) {
+            const routerBtn = e.target.closest('[data-router]');
+            if (routerBtn) {
+                e.preventDefault();
+                navigateTo(routerBtn.getAttribute('data-router'));
+            }
+
+            // Handle mobile menu toggle
+            const toggleMenuBtn = e.target.closest('[data-toggle="menu"]');
+            if (toggleMenuBtn) {
+                e.preventDefault();
+                toggleMenu();
+            }
+
+            const closeModalBtn = e.target.closest('[data-close-modal]');
+            if (closeModalBtn) {
+                closeServiceModal();
+            }
+
+            const serviceCard = e.target.closest('[data-service-key]');
+            if (serviceCard) {
+                openServiceModal(serviceCard.getAttribute('data-service-key'));
+            }
+
+            const modalBookBtn = e.target.closest('[data-modal-action="book"]');
+            if (modalBookBtn) {
+                closeServiceModal();
+                navigateTo('booking');
+            }
+        });
+
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function () {
-            console.log('SK Electrical Website Loaded - Tier 3');
+            console.log('Sk electrical Website Loaded - Tier 3');
         });
     </script>
 </body>
