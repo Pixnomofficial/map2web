@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="SHREE BALAJI ENTERPRISES - Reliable Air conditioning repair service in Mumbai, Maharashtra. 5-Star Rated. Book online or call (555) 000-0000 for a free quote.">
+        content="SHREE BALAJI ENTERPRISES - Reliable Air conditioning repair service in Pune, Maharashtra. 5-Star Rated. Book online or call +91 84329 29007 for a free quote.">
     <meta name="keywords"
         content="Air conditioning repair service, [KEYWORD_2], [KEYWORD_3], SHREE BALAJI ENTERPRISES">
     <meta name="author" content="SHREE BALAJI ENTERPRISES">
     <meta property="og:title"
-        content="SHREE BALAJI ENTERPRISES | Mumbai, Maharashtra - Book Online">
+        content="SHREE BALAJI ENTERPRISES | Pune, Maharashtra - Book Online">
     <meta property="og:description"
-        content="Professional Air conditioning repair service services in Mumbai, Maharashtra. 5-star rated. Book online today!">
+        content="Professional Air conditioning repair service services in Pune, Maharashtra. 5-star rated. Book online today!">
     <meta property="og:type" content="website">
-    <title>SHREE BALAJI ENTERPRISES | Mumbai, Maharashtra - Book Online</title>
+    <title>SHREE BALAJI ENTERPRISES | Pune, Maharashtra - Book Online</title>
     <link rel="icon" type="image/png" href="logo.png">
 
     <!-- Fonts, Icons & EmailJS -->
@@ -177,7 +177,7 @@
         header {
             background: var(--surface);
             position: sticky;
-            top: 0;
+            top: 40px;
             z-index: 1000;
             box-shadow: var(--shadow-sm);
         }
@@ -209,6 +209,14 @@
             display: flex;
             gap: 20px;
             align-items: center;
+        }
+
+        .nav-btn {
+            background: none;
+            border: none;
+            font: inherit;
+            cursor: pointer;
+            padding: 0;
         }
 
         .nav-link {
@@ -1110,6 +1118,12 @@
 
 <body>
 
+    <!-- Demo Banner -->
+    <div onclick="window.open('https://lonarx.us/appointment.html','_blank')" style="position:fixed;top:0;left:0;width:100%;z-index:99999;background:linear-gradient(90deg,#e8a012,#f0b83a);color:#1a1a1a;text-align:center;padding:10px 15px;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.15);font-family:sans-serif;">
+      This is a demo site — for changes and making sites <span style="text-decoration:underline;color:#1a1a1a;font-weight:700;margin-left:4px;">Book Appointment</span>
+    </div>
+    <div style="height:40px;"></div>
+
     <!-- Toast Notification -->
     <div id="toast" class="toast">
         <i class="fas fa-check-circle" style="font-size: 1.5rem; color: var(--success);"></i>
@@ -1141,20 +1155,22 @@
                 <img src="https://ui-avatars.com/api/?name=SHREE+BALAJI+ENTERPRISES&background=0f496c&color=ffd04b&size=512" alt="SHREE BALAJI ENTERPRISES" class="logo-img"
                     style="height: 50px; width: auto; border-radius: 5px; margin-right: 10px;"> SHREE BALAJI ENTERPRISES
             </div>
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-link active" onclick="navigateTo('home')">Home</li>
-                <li class="nav-link" onclick="navigateTo('about')">About Us</li>
-                <li class="nav-link" onclick="navigateTo('services')">Services</li>
-                <li class="nav-link" onclick="navigateTo('portfolio')">Portfolio</li>
-                <li class="nav-link" onclick="navigateTo('reviews')">Reviews</li>
-                <li class="nav-link" onclick="navigateTo('booking')">Book Online</li>
-                <li class="nav-link" onclick="navigateTo('faqs')">FAQs</li>
-                <li><button onclick="navigateTo('contact')" class="btn btn-primary"
-                        style="padding: 10px 24px; font-size: 0.85rem; border-radius: 8px;">Get Quote</button></li>
-            </ul>
-            <div class="hamburger" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><button class="nav-btn nav-link active" data-router="home" data-target="home">Home</button></li>
+                    <li><button class="nav-btn nav-link" data-router="about" data-target="about">About Us</button></li>
+                    <li><button class="nav-btn nav-link" data-router="services" data-target="services">Services</button></li>
+                    <li><button class="nav-btn nav-link" data-router="portfolio" data-target="portfolio">Portfolio</button></li>
+                    <li><button class="nav-btn nav-link" data-router="reviews" data-target="reviews">Reviews</button></li>
+                    <li><button class="nav-btn nav-link" data-router="booking" data-target="booking">Book Online</button></li>
+                    <li><button class="nav-btn nav-link" data-router="faqs" data-target="faqs">FAQs</button></li>
+                    <li><button data-router="contact" class="btn btn-primary"
+                            style="padding: 10px 24px; font-size: 0.85rem; border-radius: 8px;">Get Quote</button></li>
+                </ul>
+            </nav>
+            <button class="hamburger nav-btn" data-toggle="menu" aria-label="Toggle Navigation">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
         </div>
     </header>
 
@@ -1163,14 +1179,14 @@
         <div class="hero">
             <div class="container">
                 <div class="badge">
-                    <i class="fas fa-star" style="color: #fbbf24;"></i> 5-Star Google Rated in Mumbai, Maharashtra
+                    <i class="fas fa-star" style="color: #fbbf24;"></i> 5-Star Google Rated in Pune, Maharashtra
                 </div>
                 <h1>Professional Air conditioning repair service Services<br>Done Right.</h1>
                 <p>SHREE BALAJI ENTERPRISES provides reliable, high-quality Air conditioning repair service services for your home and business.</p>
                 <div style="margin-top: 35px;">
                     <button data-router="booking" class="btn btn-primary" style="margin-right: 15px;">Book
                         Online Now</button>
-                    <a href="tel:" class="btn btn-outline">Call (555) 000-0000</a>
+                    <a href="tel:918432929007" class="btn btn-outline">Call +91 84329 29007</a>
                 </div>
             </div>
         </div>
@@ -1198,7 +1214,7 @@
                 </div>
             </div>
             <div class="text-center" style="margin-top: 40px;">
-                <button onclick="navigateTo('services')" class="btn btn-outline"
+                <button data-router="services" class="btn btn-outline"
                     style="border-color: var(--primary); color: var(--primary);">View All Services</button>
             </div>
         </div>
@@ -1246,9 +1262,9 @@
                     home?</h3>
                 <p style="margin-bottom: 30px; color: var(--text-muted); font-size: 1.1rem;">Get professional and
                     reliable service, start to finish.</p>
-                <button onclick="navigateTo('contact')" class="btn btn-primary" style="margin-right: 15px;">Book an
+                <button data-router="contact" class="btn btn-primary" style="margin-right: 15px;">Book an
                     Appointment</button>
-                <button onclick="navigateTo('services')" class="btn btn-outline"
+                <button data-router="services" class="btn btn-outline"
                     style="border-color: var(--primary); color: var(--primary);">Explore Services</button>
             </div>
         </div>
@@ -1268,7 +1284,7 @@
                         <div class="divider" style="margin: 15px 0;"></div>
                     </div>
                     <p style="margin-bottom: 20px; font-size: 1.1rem; color: var(--text-main);">
-                        We are a locally owned and operated Air conditioning repair service business serving <strong>Mumbai, Maharashtra</strong>
+                        We are a locally owned and operated Air conditioning repair service business serving <strong>Pune, Maharashtra</strong>
                         and the surrounding areas.
                     </p>
                     <p style="margin-bottom: 30px; color: var(--text-muted);">
@@ -1294,7 +1310,7 @@
                     project</h3>
                 <p style="margin-bottom: 30px; color: var(--text-muted);">We'd love to add you to our list of satisfied
                     customers.</p>
-                <button onclick="navigateTo('contact')" class="btn btn-primary">Get a Quote</button>
+                <button data-router="contact" class="btn btn-primary">Get a Quote</button>
             </div>
         </div>
     </section>
@@ -1343,7 +1359,7 @@
             </div>
 
             <div class="text-center" style="margin-top: 60px;">
-                <button onclick="navigateTo('contact')" class="btn btn-primary">Book a Service Online</button>
+                <button data-router="contact" class="btn btn-primary">Book a Service Online</button>
             </div>
         </div>
     </section>
@@ -1389,7 +1405,7 @@
                 style="margin-top: 60px; text-align: center; background: white; padding: 50px; border-radius: var(--radius); box-shadow: var(--shadow-lg);">
                 <h3 style="margin-bottom: 20px; color: var(--primary-dark); font-size: 1.8rem;">Like what you see?</h3>
                 <p style="margin-bottom: 30px; color: var(--text-muted);">Let's bring your next project to life.</p>
-                <button onclick="navigateTo('contact')" class="btn btn-primary">Book Now</button>
+                <button data-router="contact" class="btn btn-primary">Book Now</button>
             </div>
         </div>
     </section>
@@ -1497,7 +1513,7 @@
                         <i class="fas fa-phone-alt"></i>
                         <div>
                             <strong>Phone</strong><br>
-                            <a href="tel:" style="color: rgba(255,255,255,0.8);">(555) 000-0000</a>
+                            <a href="tel:918432929007" style="color: rgba(255,255,255,0.8);">+91 84329 29007</a>
                         </div>
                     </div>
 
@@ -1505,7 +1521,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <strong>Location</strong><br>
-                            <span style="color: rgba(255,255,255,0.8);">Serving Mumbai, Maharashtra, CO, USA</span>
+                            <span style="color: rgba(255,255,255,0.8);">Serving Pune, Maharashtra, CO, USA</span>
                         </div>
                     </div>
 
@@ -1555,7 +1571,7 @@
                         <div class="form-group">
                             <label class="form-label" style="color: #e2e8f0;">Address *</label>
                             <input type="text" id="contactAddress" class="form-control"
-                                placeholder="123 Main St, Mumbai, Maharashtra 80020" required
+                                placeholder="123 Main St, Pune, Maharashtra 80020" required
                                 style="background: #2a2a3e; border-color: #3a3a4e; color: white;">
                         </div>
                         <!-- Email (optional) -->
@@ -1627,7 +1643,7 @@
                     <h3 style="color: var(--primary-dark); margin-bottom: 15px; font-size: 1.1rem;">What areas do you
                         serve?</h3>
                     <p style="color: var(--text-muted); line-height: 1.6;">We provide Air conditioning repair service services
-                        throughout Mumbai, Maharashtra. For service areas outside these cities, please contact us to discuss
+                        throughout Pune, Maharashtra. For service areas outside these cities, please contact us to discuss
                         availability.</p>
                 </div>
 
@@ -1640,7 +1656,7 @@
                         Local Time
                         daily. Our standard operating days are Daily. Use our online booking system to
                         schedule at your convenience or
-                        call (555) 000-0000.</p>
+                        call +91 84329 29007.</p>
                 </div>
 
                 <!-- FAQ Item 4 -->
@@ -1713,7 +1729,7 @@
                     <h3 style="color: var(--primary-dark); margin-bottom: 15px; font-size: 1.1rem;">Still have
                         questions?</h3>
                     <p style="color: var(--text-muted); line-height: 1.6;">If you can't find the answer here, feel free
-                        to reach out! Call us at <strong>(555) 000-0000</strong> or use our chat assistant on the
+                        to reach out! Call us at <strong>+91 84329 29007</strong> or use our chat assistant on the
                         website. Our team is available to help with any questions about our services.</p>
                 </div>
             </div>
@@ -1725,7 +1741,7 @@
         <div class="container footer-grid">
             <div class="footer-col brand-col">
                 <h4 class="footer-logo">SHREE BALAJI ENTERPRISES</h4>
-                <p>Your trusted Air conditioning repair service service in Mumbai, Maharashtra, CO, USA. Professional,
+                <p>Your trusted Air conditioning repair service service in Pune, Maharashtra, CO, USA. Professional,
                     reliable, and affordable home
                     services.
                 </p>
@@ -1738,33 +1754,33 @@
             <div class="footer-col links-col">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><span class="footer-link" onclick="navigateTo('home')">Home</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('about')">About Us</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Services</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('portfolio')">Portfolio</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('reviews')">Reviews</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('booking')">Book Online</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('faqs')">FAQs</span></li>
+                    <li><span class="footer-link" data-router="home">Home</span></li>
+                    <li><span class="footer-link" data-router="about">About Us</span></li>
+                    <li><span class="footer-link" data-router="services">Services</span></li>
+                    <li><span class="footer-link" data-router="portfolio">Portfolio</span></li>
+                    <li><span class="footer-link" data-router="reviews">Reviews</span></li>
+                    <li><span class="footer-link" data-router="booking">Book Online</span></li>
+                    <li><span class="footer-link" data-router="faqs">FAQs</span></li>
                 </ul>
             </div>
             <div class="footer-col services-col">
                 <h4>Services</h4>
                 <ul>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Residential Air conditioning repair service</span>
+                    <li><span class="footer-link" data-router="services">Residential Air conditioning repair service</span>
                     </li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Preventive Maintenance</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Emergency HVAC</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Indoor Air Quality</span>
+                    <li><span class="footer-link" data-router="services">Preventive Maintenance</span></li>
+                    <li><span class="footer-link" data-router="services">Emergency HVAC</span></li>
+                    <li><span class="footer-link" data-router="services">Indoor Air Quality</span>
                     </li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Commercial Air conditioning repair service</span>
+                    <li><span class="footer-link" data-router="services">Commercial Air conditioning repair service</span>
                     </li>
                 </ul>
             </div>
             <div class="footer-col contact-col">
                 <h4>Contact</h4>
-                <p><i class="fas fa-phone-alt"></i> (555) 000-0000</p>
+                <p><i class="fas fa-phone-alt"></i> +91 84329 29007</p>
                 <p><i class="fas fa-envelope"></i> contact@shreebalajienterprises.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> Room No 06, Building, Sangharsh Nagar, Chandivali, Andheri East, Mumbai, Maharashtra 400072, India</p>
+                <p><i class="fas fa-map-marker-alt"></i> Melon Society, D101, near tara tarang society, Wagholi, Pune, Maharashtra 412207, India</p>
                 <button data-router="booking" class="btn btn-warning footer-cta">BOOK NOW</button>
             </div>
         </div>
@@ -1819,30 +1835,30 @@
         <div class="float-btn chatbot-btn" onclick="toggleChatbot()" title="AI Assistant">
             <i class="fas fa-robot"></i>
         </div>
-        <a href="tel:" class="float-btn phone-btn" title="Call Now">
+        <a href="tel:918432929007" class="float-btn phone-btn" title="Call Now">
             <i class="fas fa-phone"></i>
         </a>
     </div>
 
     <!-- MOBILE NAV BOTTOM -->
     <nav class="mobile-bar">
-        <button class="nav-btn mobile-link active" data-target="home" onclick="navigateTo('home')">
+        <button class="nav-btn mobile-link active" data-target="home" data-router="home">
             <i class="fas fa-home" aria-hidden="true"></i>Home
         </button>
-        <button class="nav-btn mobile-link" data-target="services" onclick="navigateTo('services')">
+        <button class="nav-btn mobile-link" data-target="services" data-router="services">
             <i class="fas fa-broom" aria-hidden="true"></i>Services
         </button>
-        <button class="nav-btn mobile-link" data-target="home" onclick="navigateTo('home')"
+        <button class="nav-btn mobile-link" data-target="home" data-router="home"
             style="transform: translateY(-15px);">
             <div
                 style="background: var(--white); padding: 5px; border-radius:32px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                 <img src="logo.png" alt="Logo" style="height: 45px; width: auto; border-radius: 4px; display: block;">
             </div>
         </button>
-        <button class="nav-btn mobile-link" data-target="portfolio" onclick="navigateTo('portfolio')">
+        <button class="nav-btn mobile-link" data-target="portfolio" data-router="portfolio">
             <i class="fas fa-images" aria-hidden="true"></i>Portfolio
         </button>
-        <button class="nav-btn mobile-link" data-target="booking" onclick="navigateTo('booking')">
+        <button class="nav-btn mobile-link" data-target="booking" data-router="booking">
             <i class="fas fa-calendar-check" aria-hidden="true"></i>Book
         </button>
     </nav>
@@ -1977,7 +1993,7 @@
         const EMAILJS_CUSTOMER_TEMPLATE = 'template_1v0dbro'; // Auto-Reply - goes to customer
 
         // Initialize EmailJS
-        emailjs.init(EMAILJS_PUBLIC_KEY);
+        if (typeof emailjs !== 'undefined') { emailjs.init(EMAILJS_PUBLIC_KEY); }
 
         async function submitContactForm(e) {
             e.preventDefault();
@@ -2190,6 +2206,38 @@
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 closeServiceModal();
+            }
+        });
+
+        // Event delegation for data-router navigation (matches tier1/tier2 pattern)
+        document.addEventListener('click', function(e) {
+            const routerBtn = e.target.closest('[data-router]');
+            if (routerBtn) {
+                e.preventDefault();
+                navigateTo(routerBtn.getAttribute('data-router'));
+            }
+
+            // Handle mobile menu toggle
+            const toggleMenuBtn = e.target.closest('[data-toggle="menu"]');
+            if (toggleMenuBtn) {
+                e.preventDefault();
+                toggleMenu();
+            }
+
+            const closeModalBtn = e.target.closest('[data-close-modal]');
+            if (closeModalBtn) {
+                closeServiceModal();
+            }
+
+            const serviceCard = e.target.closest('[data-service-key]');
+            if (serviceCard) {
+                openServiceModal(serviceCard.getAttribute('data-service-key'));
+            }
+
+            const modalBookBtn = e.target.closest('[data-modal-action="book"]');
+            if (modalBookBtn) {
+                closeServiceModal();
+                navigateTo('booking');
             }
         });
 
