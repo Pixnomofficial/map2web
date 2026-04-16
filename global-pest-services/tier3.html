@@ -177,7 +177,7 @@
         header {
             background: var(--surface);
             position: sticky;
-            top: 0;
+            top: 40px;
             z-index: 1000;
             box-shadow: var(--shadow-sm);
         }
@@ -209,6 +209,14 @@
             display: flex;
             gap: 20px;
             align-items: center;
+        }
+
+        .nav-btn {
+            background: none;
+            border: none;
+            font: inherit;
+            cursor: pointer;
+            padding: 0;
         }
 
         .nav-link {
@@ -1110,6 +1118,12 @@
 
 <body>
 
+    <!-- Demo Banner -->
+    <div onclick="window.open('https://lonarx.us/appointment.html','_blank')" style="position:fixed;top:0;left:0;width:100%;z-index:99999;background:linear-gradient(90deg,#e8a012,#f0b83a);color:#1a1a1a;text-align:center;padding:10px 15px;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.15);font-family:sans-serif;">
+      This is a demo site — for changes and making sites <span style="text-decoration:underline;color:#1a1a1a;font-weight:700;margin-left:4px;">Book Appointment</span>
+    </div>
+    <div style="height:40px;"></div>
+
     <!-- Toast Notification -->
     <div id="toast" class="toast">
         <i class="fas fa-check-circle" style="font-size: 1.5rem; color: var(--success);"></i>
@@ -1141,20 +1155,22 @@
                 <img src="https://ui-avatars.com/api/?name=Global+Pest+Services&background=0f496c&color=ffd04b&size=512" alt="Global Pest Services" class="logo-img"
                     style="height: 50px; width: auto; border-radius: 5px; margin-right: 10px;"> Global Pest Services
             </div>
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-link active" onclick="navigateTo('home')">Home</li>
-                <li class="nav-link" onclick="navigateTo('about')">About Us</li>
-                <li class="nav-link" onclick="navigateTo('services')">Services</li>
-                <li class="nav-link" onclick="navigateTo('portfolio')">Portfolio</li>
-                <li class="nav-link" onclick="navigateTo('reviews')">Reviews</li>
-                <li class="nav-link" onclick="navigateTo('booking')">Book Online</li>
-                <li class="nav-link" onclick="navigateTo('faqs')">FAQs</li>
-                <li><button onclick="navigateTo('contact')" class="btn btn-primary"
-                        style="padding: 10px 24px; font-size: 0.85rem; border-radius: 8px;">Get Quote</button></li>
-            </ul>
-            <div class="hamburger" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><button class="nav-btn nav-link active" data-router="home" data-target="home">Home</button></li>
+                    <li><button class="nav-btn nav-link" data-router="about" data-target="about">About Us</button></li>
+                    <li><button class="nav-btn nav-link" data-router="services" data-target="services">Services</button></li>
+                    <li><button class="nav-btn nav-link" data-router="portfolio" data-target="portfolio">Portfolio</button></li>
+                    <li><button class="nav-btn nav-link" data-router="reviews" data-target="reviews">Reviews</button></li>
+                    <li><button class="nav-btn nav-link" data-router="booking" data-target="booking">Book Online</button></li>
+                    <li><button class="nav-btn nav-link" data-router="faqs" data-target="faqs">FAQs</button></li>
+                    <li><button data-router="contact" class="btn btn-primary"
+                            style="padding: 10px 24px; font-size: 0.85rem; border-radius: 8px;">Get Quote</button></li>
+                </ul>
+            </nav>
+            <button class="hamburger nav-btn" data-toggle="menu" aria-label="Toggle Navigation">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
         </div>
     </header>
 
@@ -1198,7 +1214,7 @@
                 </div>
             </div>
             <div class="text-center" style="margin-top: 40px;">
-                <button onclick="navigateTo('services')" class="btn btn-outline"
+                <button data-router="services" class="btn btn-outline"
                     style="border-color: var(--primary); color: var(--primary);">View All Services</button>
             </div>
         </div>
@@ -1246,9 +1262,9 @@
                     home?</h3>
                 <p style="margin-bottom: 30px; color: var(--text-muted); font-size: 1.1rem;">Get professional and
                     reliable service, start to finish.</p>
-                <button onclick="navigateTo('contact')" class="btn btn-primary" style="margin-right: 15px;">Book an
+                <button data-router="contact" class="btn btn-primary" style="margin-right: 15px;">Book an
                     Appointment</button>
-                <button onclick="navigateTo('services')" class="btn btn-outline"
+                <button data-router="services" class="btn btn-outline"
                     style="border-color: var(--primary); color: var(--primary);">Explore Services</button>
             </div>
         </div>
@@ -1294,7 +1310,7 @@
                     project</h3>
                 <p style="margin-bottom: 30px; color: var(--text-muted);">We'd love to add you to our list of satisfied
                     customers.</p>
-                <button onclick="navigateTo('contact')" class="btn btn-primary">Get a Quote</button>
+                <button data-router="contact" class="btn btn-primary">Get a Quote</button>
             </div>
         </div>
     </section>
@@ -1343,7 +1359,7 @@
             </div>
 
             <div class="text-center" style="margin-top: 60px;">
-                <button onclick="navigateTo('contact')" class="btn btn-primary">Book a Service Online</button>
+                <button data-router="contact" class="btn btn-primary">Book a Service Online</button>
             </div>
         </div>
     </section>
@@ -1389,7 +1405,7 @@
                 style="margin-top: 60px; text-align: center; background: white; padding: 50px; border-radius: var(--radius); box-shadow: var(--shadow-lg);">
                 <h3 style="margin-bottom: 20px; color: var(--primary-dark); font-size: 1.8rem;">Like what you see?</h3>
                 <p style="margin-bottom: 30px; color: var(--text-muted);">Let's bring your next project to life.</p>
-                <button onclick="navigateTo('contact')" class="btn btn-primary">Book Now</button>
+                <button data-router="contact" class="btn btn-primary">Book Now</button>
             </div>
         </div>
     </section>
@@ -1738,25 +1754,25 @@
             <div class="footer-col links-col">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><span class="footer-link" onclick="navigateTo('home')">Home</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('about')">About Us</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Services</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('portfolio')">Portfolio</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('reviews')">Reviews</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('booking')">Book Online</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('faqs')">FAQs</span></li>
+                    <li><span class="footer-link" data-router="home">Home</span></li>
+                    <li><span class="footer-link" data-router="about">About Us</span></li>
+                    <li><span class="footer-link" data-router="services">Services</span></li>
+                    <li><span class="footer-link" data-router="portfolio">Portfolio</span></li>
+                    <li><span class="footer-link" data-router="reviews">Reviews</span></li>
+                    <li><span class="footer-link" data-router="booking">Book Online</span></li>
+                    <li><span class="footer-link" data-router="faqs">FAQs</span></li>
                 </ul>
             </div>
             <div class="footer-col services-col">
                 <h4>Services</h4>
                 <ul>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Residential Pest control service</span>
+                    <li><span class="footer-link" data-router="services">Residential Pest control service</span>
                     </li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Emergency Service</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Support & Follow-up</span></li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Custom Solutions</span>
+                    <li><span class="footer-link" data-router="services">Emergency Service</span></li>
+                    <li><span class="footer-link" data-router="services">Support & Follow-up</span></li>
+                    <li><span class="footer-link" data-router="services">Custom Solutions</span>
                     </li>
-                    <li><span class="footer-link" onclick="navigateTo('services')">Commercial Pest control service</span>
+                    <li><span class="footer-link" data-router="services">Commercial Pest control service</span>
                     </li>
                 </ul>
             </div>
@@ -1826,23 +1842,23 @@
 
     <!-- MOBILE NAV BOTTOM -->
     <nav class="mobile-bar">
-        <button class="nav-btn mobile-link active" data-target="home" onclick="navigateTo('home')">
+        <button class="nav-btn mobile-link active" data-target="home" data-router="home">
             <i class="fas fa-home" aria-hidden="true"></i>Home
         </button>
-        <button class="nav-btn mobile-link" data-target="services" onclick="navigateTo('services')">
+        <button class="nav-btn mobile-link" data-target="services" data-router="services">
             <i class="fas fa-broom" aria-hidden="true"></i>Services
         </button>
-        <button class="nav-btn mobile-link" data-target="home" onclick="navigateTo('home')"
+        <button class="nav-btn mobile-link" data-target="home" data-router="home"
             style="transform: translateY(-15px);">
             <div
                 style="background: var(--white); padding: 5px; border-radius:32px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                 <img src="logo.png" alt="Logo" style="height: 45px; width: auto; border-radius: 4px; display: block;">
             </div>
         </button>
-        <button class="nav-btn mobile-link" data-target="portfolio" onclick="navigateTo('portfolio')">
+        <button class="nav-btn mobile-link" data-target="portfolio" data-router="portfolio">
             <i class="fas fa-images" aria-hidden="true"></i>Portfolio
         </button>
-        <button class="nav-btn mobile-link" data-target="booking" onclick="navigateTo('booking')">
+        <button class="nav-btn mobile-link" data-target="booking" data-router="booking">
             <i class="fas fa-calendar-check" aria-hidden="true"></i>Book
         </button>
     </nav>
@@ -1977,7 +1993,7 @@
         const EMAILJS_CUSTOMER_TEMPLATE = 'template_1v0dbro'; // Auto-Reply - goes to customer
 
         // Initialize EmailJS
-        emailjs.init(EMAILJS_PUBLIC_KEY);
+        if (typeof emailjs !== 'undefined') { emailjs.init(EMAILJS_PUBLIC_KEY); }
 
         async function submitContactForm(e) {
             e.preventDefault();
@@ -2190,6 +2206,38 @@
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 closeServiceModal();
+            }
+        });
+
+        // Event delegation for data-router navigation (matches tier1/tier2 pattern)
+        document.addEventListener('click', function(e) {
+            const routerBtn = e.target.closest('[data-router]');
+            if (routerBtn) {
+                e.preventDefault();
+                navigateTo(routerBtn.getAttribute('data-router'));
+            }
+
+            // Handle mobile menu toggle
+            const toggleMenuBtn = e.target.closest('[data-toggle="menu"]');
+            if (toggleMenuBtn) {
+                e.preventDefault();
+                toggleMenu();
+            }
+
+            const closeModalBtn = e.target.closest('[data-close-modal]');
+            if (closeModalBtn) {
+                closeServiceModal();
+            }
+
+            const serviceCard = e.target.closest('[data-service-key]');
+            if (serviceCard) {
+                openServiceModal(serviceCard.getAttribute('data-service-key'));
+            }
+
+            const modalBookBtn = e.target.closest('[data-modal-action="book"]');
+            if (modalBookBtn) {
+                closeServiceModal();
+                navigateTo('booking');
             }
         });
 
